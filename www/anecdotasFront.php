@@ -6,9 +6,9 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cantarell" />
 
     <!--link rel="stylesheet" href="http://localhost/sources/css/bootstrap.min.css"-->
+    <link rel="stylesheet" href="http://localhost/www/sources/anecdotas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="http://localhost/www/sources/anecdotas.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
@@ -23,32 +23,28 @@
     <!--Navbar-->
 
     <header class="header">
-        <nav class="navbar navbar-expand-lg p-4" id="menu">
+        <nav class="navbar navbar-expand-lg p-4 fixed-top" id="menu">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./"><span>EEST Nº2</span></a>
+                <a class="navbar-brand" href="./index.php"><span>EEST Nº2</span><img src="sources/images/logo_trans.png" alt="" class="img-header"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#extendNav" aria-controls="extendNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-                <div class="collapse navbar-collapse justify-content-end me-5" id="extendNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="extendNav">
                     <ul class="navbar-nav mb-2 mb-lg-0 p-md-1">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./">Inicio</a>
-                        </li>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Biblioteca</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Historia</a>
-                        </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.php">Inicio</a></li>
+                        <li class="nav-item" ><a class="nav-link active" href="./anecdotasFront.php">Anécdotas</a></li>
+                        <li class="nav-item" ><a class="nav-link active" href="./Front.php">Galería</a></li>
+                        <li class="nav-item" ><a class="nav-link active" href="./historyFront.php">Historia</a></li>
+                        <li class="nav-item" ><a class="nav-link active" href="./basicFront.php">Ciclo Básico</a></li>
+                        <li class="nav-item" ><a class="nav-link active" href="./superiorFront.php">Ciclo Superior</a></li>
+                        <li class="nav-item dropdown-center">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                            Más
-                        </a>
+                                Más información
+                            </a>
                             <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./docsFront.php">Documentos</a></li>
                                 <li><a class="dropdown-item" href="./FAQ.php">FAQ</a></li>
-                                <li><a class="dropdown-item" href="./galeryFront.php">Galería</a></li>
-                                <li><a class="dropdown-item" href="./galeria.php">Archivo digital</a></li>
+                                <li><a class="dropdown-item" href="./conEtFront.php">Conectando Etapas</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -57,10 +53,10 @@
         </nav>
     </header>
 
-    <main class="container-fluid text-center mt-2">
+    <main class="container-fluid text-center mt-4">
         <h1 class="col-12" >Anécdotas</h1>
 
-<div class="gtco-testimonials">
+<div class="gtco-testimonials" style="width: 100vw;">
   <div class="owl-carousel owl-carousel1 owl-theme">
     <div>
       <div class="card text-center me-1">
@@ -114,12 +110,12 @@
         <button class="btn btn-primary mx-auto fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#anec" aria-controls="anec" aria-expanded="false" aria-label="Toggle navigation">Ver todas las anécdotas</button>
         <div class="row mt-3 mb-3 border border-1 rounded collapse" id="anec">
             <div class="row text-center justify-content-center">
-                <div class="col-1 me-2">
+                <div class="col-12 col-md-2 me-2">
                     <strong>[Nombre]</strong><br>
                     <strong>[Años que rindió]</strong>
 
                 </div>
-                <div class="col-10">
+                <div class="col-9">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga soluta tenetur non voluptates maxime nemo adipisci corrupti eum reprehenderit, eveniet perspiciatis unde consectetur natus voluptate possimus optio saepe quia, delectus illum repudiandae. Eius fugiat corporis sapiente aut! Aliquid, sit illo laboriosam repellat dignissimos sunt eligendi, et reiciendis, molestiae qui veritatis?</p>
                 </div>
             </div>
@@ -129,16 +125,30 @@
 
     </main>
 
-    <footer class="w-100 d-flex align-items justify-content-center">
-            <p class="fs-5 px-3 pt-3">
-                EEST N°2 Ing. "Felipe Senillosa"
-            </p>
-            <div class="" id="iconos">
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
+    <div class="container-fluid" id="footer">
+        <div class="row text-center fs-5" id="footer">
+            <div class="col-12 mb-0 pt-0">
+                EEST N°2 "Ing. Felipe Senillosa"
             </div>
-        </footer>
+            <div class="col-12">
+                <small>
+                    Email: eestn2tandil@abc.gob.ar
+                </small>
+            </div>
+            <div class="col-12">
+                <small>
+                    Teléfono: 0249 - 4442637/33 
+                    Leando Alem 285
+                </small>
+            </div>
+            <div class="col-12 ">
+                <small id="iconos">
+                <a href="https://www.instagram.com/la.senillosa.eestn2.tandil/"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/felipe.senillosa.9?locale=es_LA"><i class="bi bi-facebook"></i></a>
+                </small>
+            </div>
+        </div>
+    </div>
 
 
 

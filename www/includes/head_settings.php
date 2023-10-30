@@ -25,7 +25,7 @@
                 <a class="navbar-brand" href="./"><span>EEST Nº2</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#extendNav" aria-controls="extendNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
+        </button>
                 <div class="collapse navbar-collapse justify-content-end me-5" id="extendNav">
                     <ul class="navbar-nav mb-2 mb-lg-0 p-md-1">
                         <li class="nav-item">

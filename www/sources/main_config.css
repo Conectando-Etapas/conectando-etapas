@@ -1,0 +1,86 @@
+body {
+    font-family: Cantarell;
+    overflow-x: hidden;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 70px auto 70px;
+    color: #1B036D !important;
+}
+
+#menu a, span {
+    font-size: large;
+    font-weight: bold 300;
+    height: 2.3rem;
+    color: #FFF;
+}
+
+
+.dropdown-item{
+    color: #000 !important;
+}
+
+p, .card-body{
+    color: #1B036D !important;
+}
+
+.img-header{
+  height: 15px;
+  width: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.card-header {
+    color: #1B036D !important	;
+}
+
+#insc{
+    background-color: rgb(201, 201, 201);
+    border-radius: 5px;
+}
+
+
+
+header, nav{
+    color: white !important;
+    background-color: #0080FE !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-widht: 768px) {
+    #intro {
+        width: 90 !important;
+    }
+    .preview {
+        width: 100%;
+        text-align: center !important;
+    }
+    footer p {
+        display: none;
+    }
+}
+
+footer p {
+    color: white;
+}
+
+#footer{
+    color: #FFF;
+      font-size: 20rem;
+      background-color: #0080FE;
+        
+  }
+
+  .img-header{
+    height: 30px;
+    width: 30px;
+  }
+
+#iconos a{
+    font-size: 2rem;
+    color: #1B036D;
+}
+

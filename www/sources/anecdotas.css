@@ -1,7 +1,6 @@
 body {
     font-family: Cantarell;
     overflow-x: hidden;
-
     height: 100vh;
     display: grid;
     grid-template-rows: 70px auto 70px;
@@ -11,7 +10,7 @@ body {
     font-size: large;
     font-weight: bold 300;
     height: 2.3rem;
-    
+    color: white;
 }
  
 .col-10{
@@ -24,12 +23,9 @@ body {
 }
 
 
-.navbar{
-    transition: all 0.7s;
-}
 
 nav{
-    color: black !important;
+    color: white !important;
     background-color: #0080FE;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
@@ -40,6 +36,7 @@ nav{
 }
 
 header{
+  z-index: 999;
     position: sticky;
 }
 
@@ -51,39 +48,25 @@ h1, h2, h3, h4, h5 {
     color: #1B036D !important;
 }
 
+.img-header{
+  height: 30px;
+  width: 30px;
+}
 
 .carousel-inner {
     max-height: 45rem;
 }
 
-
-
-@media (max-widht: 768px) {
-    #intro {
-        width: 90 !important;
-    }
-    .preview {
-        width: 100%;
-        text-align: center !important;
-    }
-    footer p {
-        display: none;
-    }
-}
-
-footer p {
-    color: white;
-}
-
-footer{
-    font-size: 1rem;
-    background-color: #0080FE;
-
-}
-
 #iconos a{
-    font-size: 2rem;
-    color: #1B036D;
+  font-size: 2rem;
+  color: #1B036D;
+}
+
+#footer{
+  color: #FFF;
+    font-size: 20rem;
+    background-color: #0080FE;
+      
 }
 
 
