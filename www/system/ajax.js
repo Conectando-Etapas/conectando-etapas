@@ -58,6 +58,8 @@ function buscraImg() {
     data.append('pass', '1234');
     data.append('id', id);
     if(where.length > 1 ){
+      where = where.substring(where.indexOf("R")+1)
+      console.log(where)
       data.append('tipo', 2);
       data.append('where', where);
       console.log(id)
