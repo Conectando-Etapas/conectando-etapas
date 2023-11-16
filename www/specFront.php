@@ -83,9 +83,10 @@ switch ($_GET["orientacion"]) {
 
     <div class="image-container">
         <img src="./imagenes/portadasEspecializacion/<?php echo $datos["imagen"] ?>" alt="404. Not found" class="img-fluid img-spec ">
-        <h1 class="text-center text-white overlay-text"> <?php 
+        <h2 class="col-10 text-center text-white overlay-text"> <?php 
         switch ($datos["orientacion"]) {
             case 'mmo':
+                echo "Maestro mayor<br>de obras";
                 break;
             case 'quimica':
                 echo "Química";
@@ -106,7 +107,7 @@ switch ($_GET["orientacion"]) {
 
         }
         
-        ?> </h1>
+        ?> </h2>
 
         </div>
         <div class="row justify-content-center">

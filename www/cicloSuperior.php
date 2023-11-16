@@ -166,10 +166,10 @@
                 </a>
                 </div>
                 <div class="item">
-                <a href="./specFront.php?orientacion=automotor">
+                <a href="./specFront.php?orientacion=automotores">
                 <img src="../www/imagenes/automotores.jpg" alt="" class="imgSpecsSup rounded-3"/>
                 <div class="inner">
-                    <a href="./specFront.php?orientacion=automotor">Automotor</a>
+                    <a href="./specFront.php?orientacion=automotores">Automotor</a>
                 </div>
                 </a>
                 </div>
