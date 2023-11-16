@@ -1,8 +1,24 @@
 <?php
 include_once 'includes/db_con.php';
-$id = $_GET["orientacion"];
-$res = mysqli_query($link, "SELECT * FROM `orientacion` WHERE orientacion = '$id' ");
-$datos = mysqli_fetch_assoc($res);
+
+switch ($_GET["orientacion"]) {
+    case 'programacion':
+    case 'mmo':
+    case 'automotores':
+    case 'quimica':         
+    case 'electromecanica':
+    case 'informatica':
+
+        $id = $_GET["orientacion"];
+        $res = mysqli_query($link, "SELECT * FROM `orientacion` WHERE orientacion = '$id' ");
+        $datos = mysqli_fetch_assoc($res);
+
+        break;
+    default:
+        header("Location: ./cicloSuperior.php#Especializaciones");
+        die();
+        break;
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +41,7 @@ $datos = mysqli_fetch_assoc($res);
 
 </head>
 
-<body>
+<body class="<?php echo $datos['orientacion'];?>">
 
 <header class="header">
         <nav class="navbar navbar-expand-lg p-4 fixed-top" id="menu">
@@ -63,64 +79,40 @@ $datos = mysqli_fetch_assoc($res);
     
     
 
-    <main class="container-fluid">
-        <div class="row">
+    <main class="container-fluid px-0">
+
+    <div class="image-container">
+        <img src="./imagenes/portadasEspecializacion/<?php echo $datos["imagen"] ?>" alt="404. Not found" class="img-fluid img-spec ">
+        <h1 class="text-center text-white overlay-text"> <?php 
+        switch ($datos["orientacion"]) {
+            case 'mmo':
+                break;
+            case 'quimica':
+                echo "Química";
+                    break;
+            case 'programacion':
+                echo "Programación";
+                break;
+            case 'informatica':
+                echo "Informática";
+            break;
+            case 'automotores':
+                echo "Automotores";
+                break;
+            case 'electromecanica':
+                echo "Electromecánica";
+            break;
+
+
+        }
+        
+        ?> </h1>
+
+        </div>
+        <div class="row justify-content-center">
             <div class="col-10">
 
-            </div>
-        </div>
-        <div class="image-container">
-            <img src="./imagenes/imagenes/<?php
-
-                switch ($datos["orientacion"]) {
-                    case 'programacion':
-                        echo "programacion2.png";
-                        break;
-                    case 'mmo':
-                        echo "arquitectura1.png";
-                        break;
-                    case 'automotores':
-                        echo "automotor4.png";
-                        break;
-                    case 'quimica':
-                        echo "quimica2.png";
-                        break;                   
-                    case 'electromecanica':
-                        echo "electro1.png";
-                        break;
-                    case 'informatica':
-                        echo "informatica1.png";
-                        break;
-                }
-
-            ?>" alt="" class="img-fluid img-spec ">
-            <h1 class="text-center text-white overlay-text"> <?php 
-            switch ($datos["orientacion"]) {
-                case 'mmo':
-                    echo "Maestro mayor de obra";
-                    break;
-                case 'quimica':
-                    echo "Química";
-                        break;
-                case 'programacion':
-                    echo "Programación";
-                    break;
-                case 'informatica':
-                    echo "Informática";
-                break;
-                case 'automotores':
-                    echo "Automotores";
-                    break;
-                case 'electromecanica':
-                    echo "Electromecánica";
-                break;
-
-
-            }
-            
-            ?> </h1>
-
-        </div>
+        
         <div class="row d-flex justify-content-center ">
             <div class="col-12 ">
         <section class=" d-flex justify-content-center">
@@ -137,8 +129,9 @@ $datos = mysqli_fetch_assoc($res);
 
         <!--"Rincón de egresados" dependiendo de la especialización contando como les fue-->
 
-
-    </main>
+        </div>
+    </div>
+</main>
 
 
     <div class="container-fluid" id="footer">

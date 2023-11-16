@@ -63,10 +63,10 @@
         
         <hr>
         <div class="row font-left mt-5">
-            <div class="col-12 col-md-4">
+            <div class="col-10 col-lg-4">
                 <img src="../www/imagenes/electro.jpg" alt="" class="img-fluid m-0 p-0 w-100">
             </div>
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-lg-8">
                 <h3>Cuarto Año</h3>
                 <h4>Información</h4>
                 <p class="fs-5">El cuarto año técnico contiene materias curriculares como Literatura, Ingles, Salud y Adolescencia, Historia, Geogafría, y Educación Física. Cada una de estas tiene una carga de 72 horas <strong>anuales</strong>.</p>
@@ -81,22 +81,22 @@
         </div>
         <hr>
         <div class="row font-right"> 
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-lg-8">
                 <h3>Quinto Año</h3>
                 <h4>Información</h4>
                 <p class="fs-5">En el quinto año técnico podemos ver materias de formación general como Literatura, Inglés, Politica y Ciudadanía, Historia, Geografía, y Educación Física. Todas estas poseen una carga horaria de 72 horas <strong>anuales</strong>.</p>
                 <p class="fs-5">Junto con estas, también apreciamos Análisis Matemático, como materia de formación científico-tecnológica, con una carga horaria de 144 horas.</p>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-10 col-lg-4">
                 <img src="../www/imagenes/electro.jpg" alt="" class="img-fluid m-0 p-0 w-100">
             </div>
         </div>
         <hr>
         <div class="row font-left">
-            <div class="col-12 col-md-4">
+            <div class="col-10 col-lg-4">
                 <img src="../www/imagenes/electro.jpg" alt="" class="img-fluid m-0 p-0 w-100">
             </div>
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-lg-8">
                 <h3>Sexto Año</h3>
                 <h4>Información</h4>
                 <p class="fs-5">En este sexto año técnico, veremos materias curriculares como Literatura, Inglés, Educación Física, Filosofía, y Arte. Todas estas cuentas con un total de 72 horas <strong>anuales</strong>.</p>
@@ -105,13 +105,13 @@
         </div>
         <hr>
         <div class="row font-right mb-4">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-lg-8">
                 <h3>Séptimo Año</h3>
                 <h4>Información</h4>
                 <p class="fs-5">Este séptimo año técnico, es, sin lugar a duda, el más importante que podemos apreciar. Ya que en este año se lleva a cabo el famoso "proyecto final", donde se ponen a prueba los contenidos aprendidos en cada tecnicatura. Los proyectos suelen hacerse, cómo máximo, de 4 personas, pero puede haber situaciones excepcionales donde se pueda extender el máximo por uno o dos integrantes más.</p>
                 <p class="fs-5">La única materia curricular que vemos son las Prácticas Profesionalizantes, las cuales deben cumplir un total de 200 horas <strong>anuales</strong>.</p>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-10 col-lg-4">
                 <img src="../www/imagenes/electro.jpg" alt="" class="img-fluid m-0 p-0 w-100">
             </div>
         </div>
