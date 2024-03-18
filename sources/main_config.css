@@ -1,0 +1,240 @@
+body {
+    font-family: Cantarell;
+    overflow-x: hidden;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 70px auto 70px;
+    color: #1B036D !important;
+}
+
+#menu a, span {
+    font-size: large;
+    font-weight: bold 300;
+    height: 2.3rem;
+    color: #FFF;
+}
+
+.img-spec{
+    max-height: 50vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.img-rinEgre{
+    height: 150px;
+    width: 150px;
+}
+
+.dropdown-item{
+    color: #000 !important;
+}
+
+
+
+p, .card-body{
+    color: #1B036D !important;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.card-header {
+    color: #1B036D !important	;
+}
+
+#insc{
+    background-color: rgb(201, 201, 201);
+    border-radius: 5px;
+}
+
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100vw;
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100vw;
+    height: auto;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 100px; 
+    text-align: center;
+  }
+
+
+  .card-img-top{
+    width: 5vw;
+    height: 40vh;
+
+  }
+
+
+
+header, nav{
+    color: white !important;
+    background-color: #0080FE !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-widht: 768px) {
+    #intro {
+        width: 90 !important;
+    }
+    .preview {
+        width: 100%;
+        text-align: center !important;
+    }
+    footer p {
+        display: none;
+    }
+
+
+}
+
+
+footer p {
+    color: white;
+}
+
+#footer{
+    color: #FFF;
+      font-size: 20rem;
+      background-color: #0080FE;
+
+        
+  }
+
+  
+
+  .img-header{
+    height: 30px;
+    width: 30px;
+  }
+
+#iconos a{
+    font-size: 2rem;
+    color: #1B036D;
+}
+
+
+
+.img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#Buscar{
+    z-index: 0;
+}
+#card, #borrarBusqueda, #recomendados {
+    display: none;
+}
+
+.show{
+    pointer-events: auto !important;
+    opacity: 1 !important;
+
+}
+#modal-container{
+opacity: 0;
+background-color: rgba(0, 0, 0, 0.3);
+pointer-events: none;
+height: 100vh;
+width: 100vw;
+}
+
+#modal{
+    background-color: #FFF;
+    max-width: 80vw;
+    max-height: 80vh;
+
+}
+
+.font-left, .font-right{
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .font-left{
+        text-align: left;
+    }
+    .font-right{
+        text-align: right;
+    }
+}
+
+#card{
+    display: none;
+}
+#img-modal{
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+}
+
+
+
+.owlSup{
+.item{
+    opacity:0.4;
+    transition:.4s ease all;
+    margin:0 20px;
+    transform:scale(.8);
+  }
+  @media(max-width:1000px){
+    .item{margin:0; transform:scale(.9)}
+  }
+  .active .item{
+    opacity:1;
+    transform:scale(1);
+  } 
+  
+  .owl-item {
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  }
+  
+  .inner{position:absolute; bottom:30px; left:0; right:0; text-align:center;}
+  .inner a{color:#fff; text-decoration:none; border-bottom:2px solid rgba(255,255,255,0.5); transition:.3s ease border-color}
+  .inner a:hover{border-color:#fff;}
+  .black .inner a{color:#000; border-color:rgba(0,0,0,0.4)}
+  .black .inner a:hover{border-color:#000;}
+  
+  .owl-carousel:after{content:""; display:block; position:absolute; width:8%; top:0; bottom:0; left:50%; margin-left:-4%; pointer-events: none; background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/aett_logo_slider.png) no-repeat center 50%; background-size:100% auto;
+  }
+  
+  .owl-controls{position:absolute; margin-top:300px;}
+}
+
+.cat-label{
+    background-color: var(--bs-secondary);
+    color: var(--bs-light);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.filtros input:checked + .cat-label{
+    background-color: var(--bs-primary);
+    transition: 0.3s;
+}
+
+.filtros label.badge:active{
+    outline: 3px solid orangered;
+    box-sizing: border-box ;
+}

@@ -1,0 +1,39 @@
+body {
+
+    &.informatica {
+    --color-primary: #860A35;
+    --color-secondary: #AF2655;
+    --color-light: #E83E6E;
+    --color-pale: #FD8AA9;
+    }
+    &.electromecanica{
+    --color-primary: #242F9B;
+    --color-secondary: #646FD4;
+    --color-light: #9BA3EB;
+    --color-pale: #DBDFFD;
+    }
+    &.mmo{
+    --color-primary: #F5C12B;
+    --color-secondary: #FFD31D;
+    --color-light: #FFE17D;
+    --color-pale: #FFF7A5;
+    }
+    &.automotores{
+    --color-primary: #A20303;
+    --color-secondary: #C11414;
+    --color-light: #E61E1E;
+    --color-pale: #FF7676;
+    }
+    &.programacion{
+    --color-primary: #6528F7;
+    --color-secondary: #A076F9;
+    --color-light: #D7BBF5;
+    --color-pale: #EDE4FF;
+    }
+    &.quimica{
+    --color-primary: #4E944F;
+    --color-secondary: #83BD75;
+    --color-light: #A7D397;
+    --color-pale: #C2E9A9;
+    }
+}
