@@ -117,7 +117,7 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
 
     <div class="dropdown">
       <button class="btn btn-primary mx-auto fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#anec" aria-controls="anec" aria-expanded="true" aria-label="Toggle navigation">
-        Mostar/esconder anécdotas
+        Mostrar/esconder anécdotas
       </button>
         
       <div class="row mt-3 mb-3 rounded collapse show" id="anec">
@@ -140,15 +140,7 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
                 <br>
                 Fecha: <?php echo $datos['fecha'] ?>
               </div>
-
-
-
-
-
-
-
-
-
+              
               <div class="row  d-flex justify-content-center reaccines ">
 
                         <div class="col-2 row">
@@ -221,15 +213,25 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
         </div>
     </div>
 
+    <!-- Bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <!-- <script src="./sources/librerias/jQuery3.7.1.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- <script src="./sources/js/bootstrap.min.js"></script> -->
+    <!-- <script src="./sources/js/bootstrap.bundle.js"></script> -->
+
+    <!-- Funcionamiento de botones dinámicos (dropdown) -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <!-- Librerias -->
     <script type="module" src="sources/librerias/Markdown-Tag-main/markdown-tag.js"></script>
     <script src="sources/librerias/Markdown-Tag-main/markdown-tag-commonmark.js"></script>
     <!-- <script src="sources/librerias/Markdown-Tag-main/markdown-tag-GitHub.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
+
   <script>
     (function () {
       "use strict";
@@ -263,6 +265,6 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
   </script>
 </body>
 
-<script src="system/reaciones.js"></script>
+<script src="./system/reaciones.js"></script>
 
 </html>

@@ -4,16 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cantarell" />
 
-    <link rel="stylesheet" href="http://localhost/www/sources/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/www/sources/main_config.css">
+    <!-- Estilos BS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="http://localhost/www/sources/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="./sources/bootstrap/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
+    <!-- Estilos propios e iconos-->
+    <link rel="stylesheet" href="./sources/main_config.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://kit.fontawesome.com/e7401517de.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="http://localhost/www/sources/librerias/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="http://localhost/www/sources/librerias/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+
+    <!-- Otros estilos (librerias) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <link rel="stylesheet" href="./sources/librerias/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./sources/librerias/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
     <title>Ciclo Superior - EEST N°2 "Ing. Felipe Senillosa"</title>
 
 </head>
@@ -64,7 +71,7 @@
         <hr>
         <div class="row font-left mt-5">
             <div class="col-10 col-lg-4">
-                <img src="../www/imagenes/electro.jpg" alt="" class="img-fluid m-0 p-0 w-100">
+                <img src="./imagenes/electro.jpg" alt="" class="img-fluid m-0 p-0 w-100">
             </div>
             <div class="col-12 col-lg-8">
                 <h3>Cuarto Año</h3>
@@ -88,13 +95,13 @@
                 <p class="fs-5">Junto con estas, también apreciamos Análisis Matemático, como materia de formación científico-tecnológica, con una carga horaria de 144 horas.</p>
             </div>
             <div class="col-10 col-lg-4">
-                <img src="../www/imagenes/electro.jpg" alt="" class="img-fluid m-0 p-0 w-100">
+                <img src="./imagenes/electro.jpg" alt="" class="img-fluid m-0 p-0 w-100">
             </div>
         </div>
         <hr>
         <div class="row font-left">
             <div class="col-10 col-lg-4">
-                <img src="../www/imagenes/electro.jpg" alt="" class="img-fluid m-0 p-0 w-100">
+                <img src="./imagenes/electro.jpg" alt="" class="img-fluid m-0 p-0 w-100">
             </div>
             <div class="col-12 col-lg-8">
                 <h3>Sexto Año</h3>
@@ -112,7 +119,7 @@
                 <p class="fs-5">La única materia curricular que vemos son las Prácticas Profesionalizantes, las cuales deben cumplir un total de 200 horas <strong>anuales</strong>.</p>
             </div>
             <div class="col-10 col-lg-4">
-                <img src="../www/imagenes/electro.jpg" alt="" class="img-fluid m-0 p-0 w-100">
+                <img src="./imagenes/electro.jpg" alt="" class="img-fluid m-0 p-0 w-100">
             </div>
         </div>
 
@@ -121,64 +128,59 @@
             <p class="fs-5">Aquí podrá entrar en detalle acerca de las diferentes especializaciones que ofrece nuestra institución.</p>
         </div>
 
-
-    
-
             <div class="owl-carousel owlSup">
                 <div class="item">
-                <a href="./specFront.php?orientacion=programacion">
-                <img src="../www/imagenes/informatica3.jpg" alt="" class="imgSpecsSup rounded-3"/>
-                <div class="inner">
-                    <a href="./specFront.php?orientacion=programacion">Programación</a>
-                </div>
-                </a>
-                </div>
-                <div class="item">
-                <a href="./specFront.php?orientacion=electromecanica">
-                <img src="../www/imagenes/electro2.jpg" alt="" class="imgSpecsSup rounded-3"/>
-                <div class="inner">
-                    <a href="./specFront.php?orientacion=electromecanica">Electromecánica</a>
-                </div>
-                </a>
+                    <a href="./specFront.php?orientacion=programacion">
+                        <img src="./imagenes/informatica3.jpg" alt="" class="imgSpecsSup rounded-3"/>
+                        <div class="inner">
+                            <a href="./specFront.php?orientacion=programacion">Programación</a>
+                        </div>
+                    </a>
                 </div>
                 <div class="item">
-                <a href="./specFront.php?orientacion=quimica">
-                <img src="../www/imagenes/quimica2.jpg" alt="" class="imgSpecsSup rounded-3"/>
-                <div class="inner">
-                    <a href="./specFront.php?orientacion=quimica">Química</a>
-                </div>
-                </a>
-                </div>
-                <div class="item">
-                <a href="./specFront.php?orientacion=informatica">
-                <img src="../www/imagenes/informatica3.jpg" alt="" class="imgSpecsSup rounded-3"/>
-                <div class="inner">
-                    <a href="./specFront.php?orientacion=informatica">Informática</a>
-                </div>
-                </a>
+                    <a href="./specFront.php?orientacion=electromecanica">
+                        <img src="./imagenes/electro2.jpg" alt="" class="imgSpecsSup rounded-3"/>
+                        <div class="inner">
+                            <a href="./specFront.php?orientacion=electromecanica">Electromecánica</a>
+                        </div>
+                    </a>
                 </div>
                 <div class="item">
-                <a href="./specFront.php?orientacion=mmo">
-                <img src="../www/imagenes/maestro.jpg" alt="" class="imgSpecsSup rounded-3"/>
-                <div class="inner">
-                    <a href="./specFront.php?orientacion=mmo">Maestro Mayor de Obras</a>
-                </div>
-                </a>
+                    <a href="./specFront.php?orientacion=quimica">
+                        <img src="./imagenes/quimica2.jpg" alt="" class="imgSpecsSup rounded-3"/>
+                        <div class="inner">
+                            <a href="./specFront.php?orientacion=quimica">Química</a>
+                        </div>
+                    </a>
                 </div>
                 <div class="item">
-                <a href="./specFront.php?orientacion=automotores">
-                <img src="../www/imagenes/automotores.jpg" alt="" class="imgSpecsSup rounded-3"/>
-                <div class="inner">
-                    <a href="./specFront.php?orientacion=automotores">Automotor</a>
+                    <a href="./specFront.php?orientacion=informatica">
+                        <img src="./imagenes/informatica3.jpg" alt="" class="imgSpecsSup rounded-3"/>
+                        <div class="inner">
+                            <a href="./specFront.php?orientacion=informatica">Informática</a>
+                        </div>
+                    </a>
                 </div>
-                </a>
+                <div class="item">
+                    <a href="./specFront.php?orientacion=mmo">
+                        <img src="./imagenes/maestro.jpg" alt="" class="imgSpecsSup rounded-3"/>
+                        <div class="inner">
+                            <a href="./specFront.php?orientacion=mmo">Maestro Mayor de Obras</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="./specFront.php?orientacion=automotores">
+                        <img src="./imagenes/automotores.jpg" alt="" class="imgSpecsSup rounded-3"/>
+                        <div class="inner">
+                            <a href="./specFront.php?orientacion=automotores">Automotor</a>
+                        </div>
+                    </a>
                 </div>
             </div>
 
-
-
+        </div>
     </div>
-</div>
 
 </main>
 
@@ -212,35 +214,40 @@
         </div>
     </div>
 
-
-    <script src="https://kit.fontawesome.com/5b34b9778f.js" crossorigin="anonymous"></script>
-    <script src="http://localhost/www/sources/librerias/jQuery3.7.1.js"></script>
-
+    <!-- Bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <!-- <script src="./sources/librerias/jQuery3.7.1.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- <script src="./sources/js/bootstrap.min.js"></script> -->
+    <!-- <script src="./sources/js/bootstrap.bundle.js"></script> -->
+
+    <!-- Funcionamiento de botones dinámicos (dropdown) -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="http://localhost\www\sources\librerias\OwlCarousel2-2.3.4\docs\assets\owlcarousel/owl.carousel.min.js"></script>
+
+
+    <script src="./sources/librerias/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+
     <script>
         $('.owl-carousel').owlCarousel({
-    stagePadding: 200,
+    // stagePadding: 100,
+    items:1,
     loop:true,
-    margin: 20,
-    nav:false,
-    center:true,
-    items: 1,
-    lazyLoad: true,
+    margin: 10,
     nav:true,
+    center:false,
+    lazyLoad: true,
+    nav:false,
     responsive:{
-            0:{
-                items:1,
-                stagePadding: 20
+            0: {
+                stagePadding: 100,
+                center: true
             },
             600:{
-                items:1,
-                stagePadding: 20
+                stagePadding: 150,
+                center: true
             },
             1000:{
-                items:1,
                 stagePadding: 200
             }
     }

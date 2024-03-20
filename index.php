@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cantarell" />
     
-    <link rel="stylesheet" href="http://localhost/www/sources/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/www/sources/custom.css">
+    <link rel="stylesheet" href="./sources/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./sources/custom.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="http://localhost/www/sources/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./sources/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     
     <script src="https://kit.fontawesome.com/e7401517de.js" crossorigin="anonymous"></script>
@@ -37,7 +37,7 @@
                         <li class="nav-item" ><a class="nav-link" href="./historyFront.php">Historia</a></li>
                         <li class="nav-item" ><a class="nav-link" href="./basicFront.php">Ciclo Básico</a></li>
                         <li class="nav-item" ><a class="nav-link" href="./cicloSuperior.php">Ciclo Superior</a></li>
-                        <li class="nav-item dropdown-center">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                                 Más información
                             </a>
@@ -67,11 +67,12 @@
             <div class="row w-75 mx-auto mt-5 my-5 preview">
                 <div class="row mt-5 d-flex">
                     <div class="col-md-12 col-xs-12 col-lg-5">
-                        <img class= "mt-1" src="http://localhost/www/imagenes/escuelavieja.jpg" alt="Prueba" width="100%" height="auto"></div>
+                        <img class= "mt-1" src="./imagenes/escuelavieja.jpg" alt="Prueba" width="100%" height="auto">
+                    </div>
                     <div class="col-md-12 col-lg-7 d-flex">
                         <p class="fs-4 px-3">
-                        La denominación que tenia en aquel momento, Escuela Nacional de Educación Técnica N°1 “Ing. Felipe Senillosa”, era en honor a un luchador que siendo extranjero, dejó su vida en nuestra patria trabajando en varios ámbitos de Técnica con proyectos, comisiones y trabajos personales en distintos lugares, siendo uno de ellos el Fuerte Independencia (Tandil).
-                    </p>
+                            La denominación que tenia en aquel momento, Escuela Nacional de Educación Técnica N°1 “Ing. Felipe Senillosa”, era en honor a un luchador que siendo extranjero, dejó su vida en nuestra patria trabajando en varios ámbitos de Técnica con proyectos, comisiones y trabajos personales en distintos lugares, siendo uno de ellos el Fuerte Independencia (Tandil).
+                        </p>
                     </div>
                 </div>
                 <div class="row mt-5 d-flex">
@@ -81,7 +82,7 @@
                     </p>
                     </div>
                     <div class="col-md-12 col-xs-12 col-lg-5">
-                        <img src="http://localhost/www/imagenes/electro.jpg" class="img-fluid" alt="Prueba" width="100%" height="auto">
+                        <img src="./imagenes/electro.jpg" class="img-fluid" alt="Prueba" width="100%" height="auto">
                     </div>
                 </div>
             </div>
@@ -93,7 +94,7 @@
             <h1 class="p-2 fs-2 mt-5 mx-auto fw-bold">Cursos</h1>
             <div class="row w-75 mx-auto mt-5 my-5">
                 <div class="col-xs-12 col-sm-12 col-lg-4">
-                    <div class="thumbnail"> <img data-src="holder.js/100%x200" alt="100%x200" src="../www/imagenes/carpinteria1.jpg"
+                    <div class="thumbnail"> <img data-src="holder.js/100%x200" alt="100%x200" src="./imagenes/carpinteria1.jpg"
                             data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
                         <div class="caption mt-1">
                             <h3 class="fw-bold">Ciclo Básico</h3>
@@ -102,7 +103,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-lg-4">
-                    <div class="thumbnail"> <img data-src="holder.js/100%x200" alt="100%x200" src="../www/imagenes/dibujotecnico.jpg"
+                    <div class="thumbnail"> <img data-src="holder.js/100%x200" alt="100%x200" src="./imagenes/dibujotecnico.jpg"
                             data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
                         <div class="caption mt-1">
                             <h3 class="fw-bold">Ciclo Superior</h3>
@@ -111,7 +112,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-lg-4">
-                    <div class="thumbnail"> <img alt="100%x200" src="../www/imagenes/maestro.jpg"
+                    <div class="thumbnail"> <img alt="100%x200" src="./imagenes/maestro.jpg"
                             data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
                         <div class="caption mt-1">
                             <h3 class="fw-bold">Especializaciones</h3>
@@ -151,14 +152,17 @@
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="http://localhost/www/sources/js/bootstrap.min.js"></script>
+    <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="http://localhost/www/sources/js/bootstrap.bundle.js"></script>
     
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- <script src="./sources/bootstrap/js/bootstrap.min.js"></script> -->
+    <!-- <script src="./sources/botstrap/js/bootstrap.bundle.js"></script> -->
+
+    <!-- Otras librerías -->
+
     <script>
         const newElement = document.querySelector('.navbar');
 
