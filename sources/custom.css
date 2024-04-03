@@ -1,8 +1,9 @@
 body {
+  padding: 0px !important;
     font-family: Cantarell;
     overflow-x: hidden;
     display: grid;
-    grid-template-rows: auto auto 70px;
+    /* grid-template-rows: auto auto 70px; */
 }
 svg{
   width: 100%;
@@ -182,23 +183,23 @@ hr {
         width: 100%;
         text-align: center !important;
     }
-    footer p {
-        display: none;
-    }
 }
 
-footer p {
-    color: white !important;
+footer{
+  background-color: #b6dadf;
+  color: rgb(60, 60, 60);
 }
 
-#footer{
-  color: #FFF;
-    font-size: 20rem;
-    background-color: #0080FE;
-      
+footer p, footer h3 {
+  color: rgb(60, 60, 60) !important;
 }
 
-#iconos a{
-    font-size: 2rem;
-    color: #FFF !important;
+footer a {
+  color: rgb(60, 60, 60);
+  text-decoration: none !important;
+}
+
+footer a:hover {
+  color: #1B036D;
+  font-weight: bold;
 }
