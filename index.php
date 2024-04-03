@@ -159,9 +159,6 @@
             <a class="footer-a" target="_blank" href="https://www.facebook.com/felipe.senillosa.9?locale=es_LA"><i class="bi bi-facebook fs-5"></i> Felipe Senillosa</a>
         </div>
 
-        <div class="col-12 ">
-
-        </div>
     </footer>
 
 

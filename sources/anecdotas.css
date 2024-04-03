@@ -31,7 +31,7 @@ body {
     overflow-x: hidden;
     height: 100vh;
     display: grid;
-    grid-template-rows: 70px auto 70px;
+    grid-template-rows: 70px auto auto;
 }
 
 #menu a, span {
@@ -94,14 +94,6 @@ h1, h2, h3, h4, h5 {
   font-size: 2rem;
   color: #1B036D;
 }
-
-#footer{
-  color: #FFF;
-    font-size: 20rem;
-    background-color: #0080FE;
-      
-}
-
 
 .gtco-testimonials {
     position: relative;
@@ -226,3 +218,23 @@ h1, h2, h3, h4, h5 {
       outline: 0;
     }
   }
+
+
+footer{
+  background-color: #b6dadf;
+  color: rgb(60, 60, 60);
+}
+
+footer p, footer h3 {
+  color: rgb(60, 60, 60) !important;
+}
+
+footer a {
+  color: rgb(60, 60, 60);
+  text-decoration: none !important;
+}
+
+footer a:hover {
+  color: #1B036D;
+  font-weight: bold;
+}

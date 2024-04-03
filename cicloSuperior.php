@@ -13,6 +13,7 @@
 
     <!-- Estilos propios e iconos-->
     <link rel="stylesheet" href="./sources/main_config.css">
+    <!-- <link rel="stylesheet" href="./sources/custom.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://kit.fontawesome.com/e7401517de.js" crossorigin="anonymous"></script>
 
@@ -185,34 +186,41 @@
 </main>
 
 
+<footer class="row justify-content-evenly py-4 fs-7" id="footer">
 
+<div class="col-12 col-sm-6 col-md-5 col-lg-4 px-4">
+    <h3 class="mt-3">Sobre Nosotros</h3>
+    <a href="./historyFront.php">Nuestra Historia</a><br>
+    <a href="./galeryFront.php">Nosotros en acción</a><br>
+    <a href="./basicFront.php">Ciclo Basico</a><br>
+    <a href="./cicloSuperior.php">Ciclo Superior</a><br>
 
-    <div class="container-fluid" id="footer">
+    <h3 class="mt-3">Nuestros Cursos</h3>
+    <a href="./specFront.php?orientacion=mmo">Maestro Mayor de Obras</a><br>
+    <a href="./specFront.php?orientacion=electromecanica">Electromecánica</a><br>
+    <a href="./specFront.php?orientacion=quimica">Química</a><br>
+    <a href="./specFront.php?orientacion=informatica">Informática</a><br>
+    <a href="./specFront.php?orientacion=programacion">Programación</a>
+</div>
+<div class="col-12 col-sm-6 col-md-5 col-lg-4 px-4">
+    <h3 class="mt-3">Ayuda</h3>
+    <a href="./FAQ.php">Centro de Ayuda</a><br>
+    <a href="./docsFront.php">Guías y documentos</a>
 
+    <h3 class="mt-3">Contacto</h3>
+    <p>
+        Leando Alem 285 - Tandil<br>
+        Teléfono: 0249 - 4442637/33<br>
+        <a href="mailto:eestn2tandil@abc.gob.ar">
+            Email: eestn2tandil@abc.gob.ar
+        </a><br>
+    </p>
+    <h3 class="mt-3">¡Seguinos!</h3>
+    <a class="footer-a" target="_blank" href="https://www.instagram.com/la.senillosa.eestn2.tandil/"><i class="bi bi-instagram fs-5"></i> la.senillosa.eestn2.tandil</a><br>
+    <a class="footer-a" target="_blank" href="https://www.facebook.com/felipe.senillosa.9?locale=es_LA"><i class="bi bi-facebook fs-5"></i> Felipe Senillosa</a>
+</div>
 
-        <div class="row text-center fs-5" id="footer">
-            <div class="col-12 mb-0 pt-0">
-                EEST N°2 "Ing. Felipe Senillosa"
-            </div>
-            <div class="col-12">
-                <small>
-                    Email: eestn2tandil@abc.gob.ar
-                </small>
-            </div>
-            <div class="col-12">
-                <small>
-                    Teléfono: 0249 - 4442637/33 
-                    Leando Alem 285
-                </small>
-            </div>
-            <div class="col-12 ">
-                <small id="iconos">
-                <a href="https://www.instagram.com/la.senillosa.eestn2.tandil/"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.facebook.com/felipe.senillosa.9?locale=es_LA"><i class="bi bi-facebook"></i></a>
-                </small>
-            </div>
-        </div>
-    </div>
+</footer>
 
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

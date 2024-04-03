@@ -12,6 +12,7 @@
     
     <!-- Estilos propios y otros -->
     <link rel="stylesheet" href="./sources/main_config.css">
+    <link rel="stylesheet" href="./sources/custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://kit.fontawesome.com/e7401517de.js" crossorigin="anonymous"></script>
     
@@ -19,11 +20,11 @@
 
 </head>
 
-<body>
+<body class="container-fluid">
 
     <!--Navbar-->
     
-    <header class="header">
+    <header class="header row">
         <nav class="navbar navbar-expand-lg p-4 fixed-top" id="menu">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./"><span>EEST Nº2</span></a>
@@ -53,53 +54,69 @@
         </nav>
     </header>
 
-    <main class="container mt-5 text-center justify-content-center">
-        <div class="row fs-4">
-            <div class="col-12 col-md-4 offset-md-1" id="insc">
-                <p>¿Querés inscribirte? ¡Descargá e imprimí este documento y llenalo!</p>
+    <main class="row py-5 text-center justify-content-center">
+        <div class="col-10">
+
+            <div class="row fs-4 mt-5">
+                <div class="col-12 col-md-4 offset-md-1" id="insc">
+                    <p>¿Querés inscribirte? ¡Descargá e imprimí este documento y llenalo!</p>
+                </div>
+                <div class="col-12 col-md-4 offset-md-1 mt-3">
+                    <a class="btn btn-outline-primary btn-lg" href="#" role="button" id="downloadInsc" name="downloadInsc"><i class="fa-solid fa-download fa-bounce" style="color: #005eff;"></i> Descargar Inscripción.</a>
+                </div>
             </div>
-            <div class="col-12 col-md-4 offset-md-1 mt-3">
-                <a class="btn btn-outline-primary btn-lg" href="#" role="button" id="downloadInsc" name="downloadInsc"><i class="fa-solid fa-download fa-bounce" style="color: #005eff;"></i> Descargar Inscripción.</a>
+            <div class="row fs-4 my-5">
+                <div class="col-12 col-md-4 offset-md-1" id="insc">
+                    <p>¿Querés rematricularte? ¡Descargá e imprimí este documento y llenalo!</p>
+                </div>
+                <div class="col-12 col-md-4 offset-md-1 mt-3">
+                <a class="btn btn-outline-primary btn-lg" href="#" role="button" id="downloadMatr" name="downloadMatr"><i class="fa-solid fa-download fa-bounce" style="color: #005eff;"></i> Descargar Matrícula.</a>
+                </div>
             </div>
+            <small class="text-muted">Posteriormente, los documentos deberan ser entregados en la institución en época de inscripciones. <br>
+                *Inscripción: este documento es el registro inicial, el cual debe entregarse una sola vez. <br>
+                **Matrícula: es el siguiente paso luego de la inscripción. Se deberá entregar nuevamente al inicio de cada ciclo lectivo.
+            </small>
+
         </div>
-        <div class="row fs-4 mt-2">
-            <div class="col-12 col-md-4 offset-md-1" id="insc">
-                <p>¿Querés rematricularte? ¡Descargá e imprimí este documento y llenalo!</p>
-            </div>
-            <div class="col-12 col-md-4 offset-md-1 mt-3">
-            <a class="btn btn-outline-primary btn-lg" href="#" role="button" id="downloadMatr" name="downloadMatr"><i class="fa-solid fa-download fa-bounce" style="color: #005eff;"></i> Descargar Matrícula.</a>
-            </div>
-        </div>
-        <small class="text-muted">Posteriormente, los documentos deberan ser entregados en la institución en época de inscripciones. <br>
-            *Inscripción: este documento es el registro inicial, el cual debe entregarse una sola vez. <br>
-            **Matrícula: es el siguiente paso luego de la inscripción. Se deberá entregar nuevamente al inicio de cada ciclo lectivo.
-        </small>
     </main>
 
-    <div class="container-fluid" id="footer">
-        <div class="row text-center fs-5" id="footer">
-            <div class="col-12 mb-0 pt-0">
-                EEST N°2 "Ing. Felipe Senillosa"
-            </div>
-            <div class="col-12">
-                <small>
-                    Email: eestn2tandil@abc.gob.ar
-                </small>
-            </div>
-            <div class="col-12">
-                <small>
-                    Teléfono: 0249 - 4442637/33 
-                    Leando Alem 285
-                </small>
-            </div>
-            <div class="col-12 ">
-                <small id="iconos">
-                <a href="https://www.instagram.com/la.senillosa.eestn2.tandil/"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.facebook.com/felipe.senillosa.9?locale=es_LA"><i class="bi bi-facebook"></i></a>
-                </small>
-            </div>
+
+    <footer class="row justify-content-evenly py-4 fs-7" id="footer">
+
+        <div class="col-12 col-sm-6 col-md-5 col-lg-4 px-4">
+            <h3 class="mt-3">Sobre Nosotros</h3>
+            <a href="./historyFront.php">Nuestra Historia</a><br>
+            <a href="./galeryFront.php">Nosotros en acción</a><br>
+            <a href="./basicFront.php">Ciclo Basico</a><br>
+            <a href="./cicloSuperior.php">Ciclo Superior</a><br>
+
+            <h3 class="mt-3">Nuestros Cursos</h3>
+            <a href="./specFront.php?orientacion=mmo">Maestro Mayor de Obras</a><br>
+            <a href="./specFront.php?orientacion=electromecanica">Electromecánica</a><br>
+            <a href="./specFront.php?orientacion=quimica">Química</a><br>
+            <a href="./specFront.php?orientacion=informatica">Informática</a><br>
+            <a href="./specFront.php?orientacion=programacion">Programación</a>
         </div>
-    </div>
+        <div class="col-12 col-sm-6 col-md-5 col-lg-4 px-4">
+            <h3 class="mt-3">Ayuda</h3>
+            <a href="./FAQ.php">Centro de Ayuda</a><br>
+            <a href="./docsFront.php">Guías y documentos</a>
+
+            <h3 class="mt-3">Contacto</h3>
+            <p>
+                Leando Alem 285 - Tandil<br>
+                Teléfono: 0249 - 4442637/33<br>
+                <a href="mailto:eestn2tandil@abc.gob.ar">
+                    Email: eestn2tandil@abc.gob.ar
+                </a><br>
+            </p>
+            <h3 class="mt-3">¡Seguinos!</h3>
+            <a class="footer-a" target="_blank" href="https://www.instagram.com/la.senillosa.eestn2.tandil/"><i class="bi bi-instagram fs-5"></i> la.senillosa.eestn2.tandil</a><br>
+            <a class="footer-a" target="_blank" href="https://www.facebook.com/felipe.senillosa.9?locale=es_LA"><i class="bi bi-facebook fs-5"></i> Felipe Senillosa</a>
+        </div>
+
+    </footer>
 
 
     <!-- Bootstrap js -->
