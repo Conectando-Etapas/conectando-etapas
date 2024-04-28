@@ -112,15 +112,15 @@ switch ($_GET["orientacion"]) {
         ?> </h2>
 
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center fs-4">
             <div class="col-10">
 
         
-        <div class="row d-flex justify-content-center ">
+        <div class="row d-flex justify-content-center fs-4">
             <div class="col-12 ">
         <section class=" d-flex justify-content-center">
         <div class="row his-cont mt-5 mb-3 d-flex justify-content-center">
-            <div class="col-12 col-md-8 ">
+            <div class="col-12 col-md-8 fs-4">
                 <h1 class="text-center mb-3">¿De que se trata la tecnicatura?</h1>
                 <?php echo $datos["Contenido"];?>
             </div>
@@ -161,8 +161,9 @@ switch ($_GET["orientacion"]) {
         <p>
             Leando Alem 285 - Tandil<br>
             Teléfono: 0249 - 4442637/33<br>
+            Email: 
             <a href="mailto:eestn2tandil@abc.gob.ar">
-                Email: eestn2tandil@abc.gob.ar
+                eestn2tandil@abc.gob.ar
             </a><br>
         </p>
         <h3 class="mt-3">¡Seguinos!</h3>

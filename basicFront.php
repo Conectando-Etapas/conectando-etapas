@@ -134,8 +134,9 @@
             <p>
                 Leando Alem 285 - Tandil<br>
                 Teléfono: 0249 - 4442637/33<br>
+                Email: 
                 <a href="mailto:eestn2tandil@abc.gob.ar">
-                    Email: eestn2tandil@abc.gob.ar
+                    eestn2tandil@abc.gob.ar
                 </a><br>
             </p>
             <h3 class="mt-3">¡Seguinos!</h3>

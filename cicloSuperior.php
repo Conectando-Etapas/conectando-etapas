@@ -65,9 +65,9 @@
             
     
         <h1 class="text-center mt-5"><strong>Ciclo Superior</strong></h1>
-        <p class=" fs-5">El ciclo superior tiene una duracion de cuatro años y posee la modalidad de Educación Técnico Profesional en donde se definen las tecnicaturas que se mostraran mas abajo.</p>
-        <p class=" fs-5">Cada una de estas orientaciones posee una Formacion cientifico-tecnologica, la cual tiene que ver con diferentes saberes que otorgan conocimientos, habilidades, destrezas y valores. Esta organizada en modulos y su funcion es comprender, integrar y profundizar los contenidos que introducen a los aspectos específicos de cada especialidad.</p>
-        <p class=" fs-6 mb-5">El ciclo superior técnico cambia drásticamente su estructura curricular en las materias técnico-especificas, o talleres, dependiendo de la tecnicatura que te encuentres cursando. Es por eso, que aquí no se hará mención sobre los talleres. Puede encontrar estos detalles en el apartado "Especializaciones".</p>
+        <p class=" fs-4">El ciclo superior tiene una duracion de cuatro años y posee la modalidad de Educación Técnico Profesional en donde se definen las tecnicaturas que se mostraran mas abajo.</p>
+        <p class=" fs-4">Cada una de estas orientaciones posee una Formacion cientifico-tecnologica, la cual tiene que ver con diferentes saberes que otorgan conocimientos, habilidades, destrezas y valores. Esta organizada en modulos y su funcion es comprender, integrar y profundizar los contenidos que introducen a los aspectos específicos de cada especialidad.</p>
+        <p class=" fs-5 mb-5">El ciclo superior técnico cambia drásticamente su estructura curricular en las materias técnico-especificas, o talleres, dependiendo de la tecnicatura que te encuentres cursando. Es por eso, que aquí no se hará mención sobre los talleres. Puede encontrar estos detalles en el apartado "Especializaciones".</p>
         
         <hr>
         <div class="row font-left mt-5">
@@ -211,8 +211,9 @@
     <p>
         Leando Alem 285 - Tandil<br>
         Teléfono: 0249 - 4442637/33<br>
+        Email: 
         <a href="mailto:eestn2tandil@abc.gob.ar">
-            Email: eestn2tandil@abc.gob.ar
+            eestn2tandil@abc.gob.ar
         </a><br>
     </p>
     <h3 class="mt-3">¡Seguinos!</h3>
