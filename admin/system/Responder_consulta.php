@@ -1,5 +1,5 @@
 <?php
-include 'includes/db_con.php';
+include '../includes/db_con.php';
 
 // if(!isset($_POST["Enviar"])){
     
@@ -70,7 +70,7 @@ $consulta = "DELETE FROM `consulta` WHERE id_cons = '".$_GET["id"]."'";
 
 mysqli_query($link, $consulta);
 
-header("location: mostrar_consulta.php");
+header("location: ../index.php");
 die();
 
 ?>

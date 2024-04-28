@@ -1,11 +1,26 @@
 <?php
 
+/* Este archivo esta dedicado a la precarga de imaegenes. */
+/* Recibe datos desde subir-imagen.php mediante un XHTTPRequest */
+/* Procesa la imagen y la guarda en la carpeta "uploads". */
+/* Devuelve los datos relacionados para la generacion de tarjetas de subida de vuelta en el archivo de origen. */
+
+
+include "../includes/db_con.php";//Conexión a la base de datos.
+
+class final_res
+{
+    public $pills;
+    public $response;
+}
+
 class response 
 {
     public $status_code = 100;
     public $status_text = "Pending..";
     public $location = "undefined";
-    public $original_name = "Imagen";
+    public $original_name = "Archivo-x";
+    public $id_temp = "undefined";
 }
 
 
@@ -49,21 +64,24 @@ for ($i = 0; $i < $lines; $i++) {
 
                 $time = date_create("now", timezone_open('America/Argentina/Buenos_Aires'));
                 
-                $location = "uploads/PRE-";
+                $location = "PRE-";
                 $location .= date_format($time, 'YmdHisu');//FOMATO: '[PRE-yyyymmddhhiissuuuuuu]' Año, mes, dia (Nro), hora en formato 24, minutos, segundos, milisegundos en formato de 6 decimales
                 $location .= "." . pathinfo($_FILES['fotos']['name'][$i], PATHINFO_EXTENSION);
 
-                try {
-                    move_uploaded_file($_FILES['fotos']['tmp_name'][$i], "../".$location);
+                if (move_uploaded_file($_FILES['fotos']['tmp_name'][$i], "../uploads/".$location)) {
+
+                    $response[$i]->location = $location;
                     $response[$i]->status_code = 200;
                     $response[$i]->status_text = "OK";
-                    $response[$i]->location = $location;
                     $response[$i]->original_name = $_FILES['fotos']['name'][$i];
-                } catch (\Throwable $th) {
+                    $response[$i]->id_temp = date_format($time, 'YmdHisu');
+                } else {
+                    $response[$i]->location = $th;
                     $response[$i]->status_code = 417; //  -- 417 = expectation failed
-                    $response[$i]->status_text = "Hubo un error inesperado al guardar el archivo:<br>417. <b>Expectation failed</b>:  - $th<br>Reintente la carga.";
+                    $response[$i]->status_text = "Hubo un error inesperado al guardar el archivo. Reintente la carga.";
                     $response[$i]->original_name = $_FILES['fotos']['name'][$i];
                 }
+                
             }
         }
     }
@@ -82,6 +100,18 @@ for ($i = 0; $i < $lines; $i++) {
     else
         http_response_code(200); //   -- status: ok
 
-    echo json_encode($response);
+
+    // Consulta la BD en busca de categorías de imagen.
+    $res = mysqli_query($link, "SELECT id_categoria, nombre, descripcion FROM categoria");
+    $pills = array();
+    for ($i = 0; $i < mysqli_num_rows($res); $i++){
+        $pills[$i] = mysqli_fetch_assoc($res);
+    }
+
+        $final_response = new final_res();
+        $final_response->pills = $pills;
+        $final_response->response = $response;
+
+    echo json_encode($final_response);
     die();
 ?>
