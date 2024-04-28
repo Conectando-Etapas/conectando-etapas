@@ -129,7 +129,7 @@
             <p class="fs-5">Aquí podrá entrar en detalle acerca de las diferentes especializaciones que ofrece nuestra institución.</p>
         </div>
 
-            <div class="owl-carousel owlSup">
+            <div class="owl-carousel owlSup col-12">
                 <div class="item">
                     <a href="./specFront.php?orientacion=programacion">
                         <img src="./imagenes/informatica3.jpg" alt="" class="imgSpecsSup rounded-3"/>
@@ -200,7 +200,8 @@
     <a href="./specFront.php?orientacion=electromecanica">Electromecánica</a><br>
     <a href="./specFront.php?orientacion=quimica">Química</a><br>
     <a href="./specFront.php?orientacion=informatica">Informática</a><br>
-    <a href="./specFront.php?orientacion=programacion">Programación</a>
+    <a href="./specFront.php?orientacion=programacion">Programación</a> <br>
+    <a href="./specFront.php?orientacion=automotores">Automotor</a>
 </div>
 <div class="col-12 col-sm-6 col-md-5 col-lg-4 px-4">
     <h3 class="mt-3">Ayuda</h3>

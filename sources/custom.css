@@ -135,7 +135,8 @@ div.item {
 }
 
 .bg-image{
-    width: 100vw;
+    width: 100vw !important;
+    padding: 0% !important;
     max-height: 50vh;
     object-fit: cover;
     top: 0;
