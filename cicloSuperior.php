@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cantarell" />
-
+    <link rel="shortcut icon" href="./sources/images/favicon.png" type="image/x-icon">
     <!-- Estilos BS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="./sources/bootstrap/css/bootstrap.min.css"> -->
@@ -65,9 +65,9 @@
             
     
         <h1 class="text-center mt-5"><strong>Ciclo Superior</strong></h1>
-        <p class=" fs-5">El ciclo superior tiene una duracion de cuatro años y posee la modalidad de Educación Técnico Profesional en donde se definen las tecnicaturas que se mostraran mas abajo.</p>
-        <p class=" fs-5">Cada una de estas orientaciones posee una Formacion cientifico-tecnologica, la cual tiene que ver con diferentes saberes que otorgan conocimientos, habilidades, destrezas y valores. Esta organizada en modulos y su funcion es comprender, integrar y profundizar los contenidos que introducen a los aspectos específicos de cada especialidad.</p>
-        <p class=" fs-6 mb-5">El ciclo superior técnico cambia drásticamente su estructura curricular en las materias técnico-especificas, o talleres, dependiendo de la tecnicatura que te encuentres cursando. Es por eso, que aquí no se hará mención sobre los talleres. Puede encontrar estos detalles en el apartado "Especializaciones".</p>
+        <p class=" fs-4">El ciclo superior tiene una duracion de cuatro años y posee la modalidad de Educación Técnico Profesional en donde se definen las tecnicaturas que se mostraran mas abajo.</p>
+        <p class=" fs-4">Cada una de estas orientaciones posee una Formacion cientifico-tecnologica, la cual tiene que ver con diferentes saberes que otorgan conocimientos, habilidades, destrezas y valores. Esta organizada en modulos y su funcion es comprender, integrar y profundizar los contenidos que introducen a los aspectos específicos de cada especialidad.</p>
+        <p class=" fs-5 mb-5">El ciclo superior técnico cambia drásticamente su estructura curricular en las materias técnico-especificas, o talleres, dependiendo de la tecnicatura que te encuentres cursando. Es por eso, que aquí no se hará mención sobre los talleres. Puede encontrar estos detalles en el apartado "Especializaciones".</p>
         
         <hr>
         <div class="row font-left mt-5">
@@ -129,7 +129,7 @@
             <p class="fs-5">Aquí podrá entrar en detalle acerca de las diferentes especializaciones que ofrece nuestra institución.</p>
         </div>
 
-            <div class="owl-carousel owlSup">
+            <div class="owl-carousel owlSup col-12">
                 <div class="item">
                     <a href="./specFront.php?orientacion=programacion">
                         <img src="./imagenes/informatica3.jpg" alt="" class="imgSpecsSup rounded-3"/>
@@ -200,7 +200,8 @@
     <a href="./specFront.php?orientacion=electromecanica">Electromecánica</a><br>
     <a href="./specFront.php?orientacion=quimica">Química</a><br>
     <a href="./specFront.php?orientacion=informatica">Informática</a><br>
-    <a href="./specFront.php?orientacion=programacion">Programación</a>
+    <a href="./specFront.php?orientacion=programacion">Programación</a> <br>
+    <a href="./specFront.php?orientacion=automotores">Automotor</a>
 </div>
 <div class="col-12 col-sm-6 col-md-5 col-lg-4 px-4">
     <h3 class="mt-3">Ayuda</h3>
@@ -211,8 +212,9 @@
     <p>
         Leando Alem 285 - Tandil<br>
         Teléfono: 0249 - 4442637/33<br>
+        Email: 
         <a href="mailto:eestn2tandil@abc.gob.ar">
-            Email: eestn2tandil@abc.gob.ar
+            eestn2tandil@abc.gob.ar
         </a><br>
     </p>
     <h3 class="mt-3">¡Seguinos!</h3>

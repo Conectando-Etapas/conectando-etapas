@@ -20,6 +20,7 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
 
     <link rel="stylesheet" href="./sources/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./sources/anecdotas.css">
+    <link rel="shortcut icon" href="./sources/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -203,7 +204,8 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
             <a href="./specFront.php?orientacion=electromecanica">Electromecánica</a><br>
             <a href="./specFront.php?orientacion=quimica">Química</a><br>
             <a href="./specFront.php?orientacion=informatica">Informática</a><br>
-            <a href="./specFront.php?orientacion=programacion">Programación</a>
+            <a href="./specFront.php?orientacion=programacion">Programación</a> <br>
+            <a href="./specFront.php?orientacion=automotores">Automotor</a>
         </div>
         <div class="col-12 col-sm-6 col-md-5 col-lg-4 px-4">
             <h3 class="mt-3">Ayuda</h3>
@@ -214,8 +216,9 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
             <p>
                 Leando Alem 285 - Tandil<br>
                 Teléfono: 0249 - 4442637/33<br>
+                Email: 
                 <a href="mailto:eestn2tandil@abc.gob.ar">
-                    Email: eestn2tandil@abc.gob.ar
+                    eestn2tandil@abc.gob.ar
                 </a><br>
             </p>
             <h3 class="mt-3">¡Seguinos!</h3>

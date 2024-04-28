@@ -27,7 +27,7 @@ switch ($_GET["orientacion"]) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cantarell" />
-    
+    <link rel="shortcut icon" href="./sources/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./sources/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./sources/main_config.css">
     <link rel="stylesheet" href="./sources/especializacion.css">
@@ -112,28 +112,18 @@ switch ($_GET["orientacion"]) {
         ?> </h2>
 
         </div>
-        <div class="row justify-content-center">
-            <div class="col-10">
-
-        
-        <div class="row d-flex justify-content-center ">
-            <div class="col-12 ">
-        <section class=" d-flex justify-content-center">
-        <div class="row his-cont mt-5 mb-3 d-flex justify-content-center">
-            <div class="col-12 col-md-8 ">
-                <h1 class="text-center mb-3">¿De que se trata la tecnicatura?</h1>
-                <?php echo $datos["Contenido"];?>
-            </div>
-        </div>
-        </section>
-
-    </div>
-</div>
-
-        <!--"Rincón de egresados" dependiendo de la especialización contando como les fue-->
-
-        </div>
-    </div>
+                <div class="row d-flex justify-content-center fs-4">
+                    <div class="col-11 col-md-12">
+                        <section class=" d-flex justify-content-center">
+                            <div class="row his-cont mt-5 mb-3 d-flex justify-content-center">
+                                <div class="col-12 col-md-8 fs-4">
+                                    <h2 class="text-center mb-3">¿De que se trata la tecnicatura?</h2><br>
+                                    <?php echo $datos["Contenido"];?>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
 </main>
     
 <footer class="row justify-content-evenly py-4 fs-7">
@@ -150,7 +140,8 @@ switch ($_GET["orientacion"]) {
         <a href="./specFront.php?orientacion=electromecanica">Electromecánica</a><br>
         <a href="./specFront.php?orientacion=quimica">Química</a><br>
         <a href="./specFront.php?orientacion=informatica">Informática</a><br>
-        <a href="./specFront.php?orientacion=programacion">Programación</a>
+        <a href="./specFront.php?orientacion=programacion">Programación</a> <br>
+        <a href="./specFront.php?orientacion=automotores">Automotor</a>
     </div>
     <div class="col-12 col-sm-6 col-md-5 col-lg-4 px-4">
         <h3 class="mt-3">Ayuda</h3>
@@ -161,8 +152,9 @@ switch ($_GET["orientacion"]) {
         <p>
             Leando Alem 285 - Tandil<br>
             Teléfono: 0249 - 4442637/33<br>
+            Email: 
             <a href="mailto:eestn2tandil@abc.gob.ar">
-                Email: eestn2tandil@abc.gob.ar
+                eestn2tandil@abc.gob.ar
             </a><br>
         </p>
         <h3 class="mt-3">¡Seguinos!</h3>

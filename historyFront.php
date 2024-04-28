@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cantarell" />
-    
+    <link rel="shortcut icon" href="./sources/images/favicon.png" type="image/x-icon">
     <!-- Estilos BS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="./sources/bootstrap/css/bootstrap.min.css"> -->
@@ -73,7 +73,7 @@
             </div>
         </div>
 
-        <div class="row mt-3 mb-3 row-history">
+        <div class="row mt-3 mb-3 row-history fs-4">
             <div class="col-12 col-md-8 fs-4 mb-3">
                 <p>En 1994, se impplementó la Ley Federal N°24.195/92 y debido a esto la escuela pasa a la jurisdicción provincial y recibe la denominación de Escuela de Educación Técnica N°2 "Ing. Felipe Senillosa".</p>
                 <p>Pasó de tener los tres años del Plan de Estudios de Polimodal en el Turno Diurno y se unificó el 7mo de la Escuela Primaria con el primer y segundo año del Ciclo Básico. En el año 2005 se instituyó un bloque técnico de seis años de duración incorporando el Tercer Ciclo, con el nombre de Escuela de Enseñanza Básica.</p>
@@ -84,10 +84,10 @@
         </div>
 
         <div class="row">
-            <div class="fs-5">
-            <p class="fs-5"> En la actualidad se han ido aplicando diferentes leyes como la Ley de Educación Nacional 26.206, la Ley de Educación Provincial N°13.688 y la Ley de Educación Técnico Profesional N°26.058, las cuales han permitido transformar la escuela permitiéndole recuperar su identidad como formadora de Técnicos.</p>
+            <div class="fs-4">
+            <p class="fs-4"> En la actualidad se han ido aplicando diferentes leyes como la Ley de Educación Nacional 26.206, la Ley de Educación Provincial N°13.688 y la Ley de Educación Técnico Profesional N°26.058, las cuales han permitido transformar la escuela permitiéndole recuperar su identidad como formadora de Técnicos.</p>
             <p>La escuela cuenta con una estructura curricular de 7 años, en donde el último año de formación específica esta orientado a las Prácticas Profesionalizantes y a familiarizar a los alumnos con el entorno socio productivo local. Además, posee con una amplia oferta educativa que involucra distintas orientaciones: Técnico en Electromecánica, Técnico en Automotores, Técnico en Química, Técnico en Maestro Mayor de Obras, Técnico en Informática y Técnico en Programación en turno diurno, y Técnico en Electromecánica, Técnico en Electrónica y Técnico en Maestro Mayor de Obras en turno nocturno.</p>
-            <p class="fs-5">La institucion cuenta con una planta permanente de 604 Docentes, y una matrícula aproximada de 1600 alumnos. Nos caracterizamos por ser una Institución abierta y en constante nexo con nuestra comunidad y con el ámbito socio productivo local, lo que convierte a la educación técnica en una oferta educativa única como herramienta de inclusión social.</p>
+            <p class="fs-4">La institucion cuenta con una planta permanente de 604 Docentes, y una matrícula aproximada de 1600 alumnos. Nos caracterizamos por ser una Institución abierta y en constante nexo con nuestra comunidad y con el ámbito socio productivo local, lo que convierte a la educación técnica en una oferta educativa única como herramienta de inclusión social.</p>
     
         </div>
     </main>
@@ -108,6 +108,7 @@
             <a href="./specFront.php?orientacion=quimica">Química</a><br>
             <a href="./specFront.php?orientacion=informatica">Informática</a><br>
             <a href="./specFront.php?orientacion=programacion">Programación</a>
+            <a href="./specFront.php?orientacion=automotores">Automotor</a>
         </div>
         <div class="col-12 col-sm-6 col-md-5 col-lg-4 px-4">
             <h3 class="mt-3">Ayuda</h3>
@@ -118,8 +119,9 @@
             <p>
                 Leando Alem 285 - Tandil<br>
                 Teléfono: 0249 - 4442637/33<br>
+                Email: 
                 <a href="mailto:eestn2tandil@abc.gob.ar">
-                    Email: eestn2tandil@abc.gob.ar
+                    eestn2tandil@abc.gob.ar
                 </a><br>
             </p>
             <h3 class="mt-3">¡Seguinos!</h3>

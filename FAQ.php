@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cantarell" />
+    <link rel="shortcut icon" href="./sources/images/favicon.png" type="image/x-icon">
 
     <!-- Estilos BS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -145,7 +146,8 @@
             <a href="./specFront.php?orientacion=electromecanica">Electromecánica</a><br>
             <a href="./specFront.php?orientacion=quimica">Química</a><br>
             <a href="./specFront.php?orientacion=informatica">Informática</a><br>
-            <a href="./specFront.php?orientacion=programacion">Programación</a>
+            <a href="./specFront.php?orientacion=programacion">Programación</a> <br>
+            <a href="./specFront.php?orientacion=automotores">Automotor</a>
         </div>
         <div class="col-12 col-sm-6 col-md-5 col-lg-4 px-4">
             <h3 class="mt-3">Ayuda</h3>
@@ -156,8 +158,9 @@
             <p>
                 Leando Alem 285 - Tandil<br>
                 Teléfono: 0249 - 4442637/33<br>
+                Email: 
                 <a href="mailto:eestn2tandil@abc.gob.ar">
-                    Email: eestn2tandil@abc.gob.ar
+                    eestn2tandil@abc.gob.ar
                 </a><br>
             </p>
             <h3 class="mt-3">¡Seguinos!</h3>
