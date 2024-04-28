@@ -10,7 +10,7 @@ unset($_SESSION['flag']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cantarell" />
-
+    <link rel="shortcut icon" href="./sources/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./sources/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./sources/main_config.css">
     <link rel="stylesheet" href="./sources/custom.css">
