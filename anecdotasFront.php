@@ -1,5 +1,5 @@
 <?php
-dawdaw
+
 
 class reacciones {
   public $like = 0;
