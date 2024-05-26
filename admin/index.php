@@ -262,33 +262,7 @@ include "includes/head_settings.php"
 
                                     </div>
 
-                                    <div class="tab-pane fade tabla" id="v-pills-proyectoEliminar" role="tabpanel" aria-labelledby="v-pills-proyectoEliminar-tab" tabindex="1">
-                                        <table class="table table-striped" id="proyectoMuestra">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">IDProyecto</th>
-                                                    <th scope="col">IDOrientación</th>
-                                                    <th scope="col">Titulo</th>
-                                                    <th scope="col">Eliminar</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="padreProyectos">
-                                                <?php
-                                                    $resAnect = mysqli_query($link, "SELECT `id_proyecto`, `id_orientacion`, `titulo` FROM `proyecto` WHERE 1");
-                                                    while($datosAnec = mysqli_fetch_assoc($resAnect)){
-                                                ?>
-                                                <tr id="proyecto-fila-<?php echo $datosAnec['id_proyecto'];?>">
-                                                    <th scope="row"><?php echo $datosAnec["id_proyecto"]; ?></th>
-                                                    <td><?php echo $datosAnec["id_orientacion"]; ?></td>
-                                                    <td><?php echo $datosAnec["titulo"]; ?></td>
-                                                    <td><button id ="<?php echo $datosAnec["id_proyecto"]; ?>" type="button" class="btn btn-danger delete">Eliminar</button></td>
-                                                </tr>
-                                                <?php
-                                                            }
-                                                ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
+
                                     
                                 </div>
                             </div>
@@ -366,5 +340,5 @@ include "includes/head_settings.php"
 
 
 <?php
-include "includes/footer.php";
+include "./includes/footer.php";
 ?>
