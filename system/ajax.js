@@ -83,7 +83,7 @@ document.getElementById("recomendados").style.display = "none";
 function buscraImgEspecifica(idEspecifica) {
   let data = new FormData;
   data.append('idEsp', idEspecifica);
-  fetch('http://localhost/system/bajarFotos.php',{
+  fetch('./system/bajarFotos.php',{
     method: "POST",
     body: data
   })
@@ -109,7 +109,7 @@ function buscraImg(tipo = null, busqueda = null,) {
     }
     }
 
-    fetch('http://localhost/system/bajarFotos.php',{
+    fetch('./system/bajarFotos.php',{
       method: "POST",
       body: data
     })
