@@ -83,7 +83,7 @@ document.getElementById("recomendados").style.display = "none";
 function buscraImgEspecifica(idEspecifica) {
   let data = new FormData;
   data.append('idEsp', idEspecifica);
-  fetch('http://localhost/www/system/bajarFotos.php',{
+  fetch('http://localhost/system/bajarFotos.php',{
     method: "POST",
     body: data
   })
@@ -93,7 +93,6 @@ function buscraImgEspecifica(idEspecifica) {
 console.log(resp)
 document.getElementById("titulo-modal").innerHTML = resp[0];
 document.getElementById("texto-modal").innerHTML = resp[2]
-// document.getElementById("").innerHTML = 
 })
 }
 
@@ -110,7 +109,7 @@ function buscraImg(tipo = null, busqueda = null,) {
     }
     }
 
-    fetch('http://localhost/www/system/bajarFotos.php',{
+    fetch('http://localhost/system/bajarFotos.php',{
       method: "POST",
       body: data
     })
@@ -125,7 +124,7 @@ function buscraImg(tipo = null, busqueda = null,) {
       element.classList.add("row");
       
       for (const ele of res[0]) {
-        element.innerHTML += `<div class="col-12 col-sm-6 col-md-4 col-xl-3 pb-3"><img id="${ele.ID}" loading="lazy" class="img rounded " src="http://localhost/www/imagenes/${ele.Direccion}" alt=""></div>`;
+        element.innerHTML += `<div class="col-12 col-sm-6 col-md-4 col-xl-3 pb-3"><img id="${ele.ID}" loading="lazy" class="img rounded " src="http://localhost/imagenes/${ele.Direccion}" alt=""></div>`;
       }
 
       if (res[1] != null) {

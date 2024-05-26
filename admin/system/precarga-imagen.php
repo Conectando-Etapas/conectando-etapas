@@ -68,7 +68,52 @@ for ($i = 0; $i < $lines; $i++) {
                 $location .= date_format($time, 'YmdHisu');//FOMATO: '[PRE-yyyymmddhhiissuuuuuu]' Año, mes, dia (Nro), hora en formato 24, minutos, segundos, milisegundos en formato de 6 decimales
                 $location .= "." . pathinfo($_FILES['fotos']['name'][$i], PATHINFO_EXTENSION);
 
-                if (move_uploaded_file($_FILES['fotos']['tmp_name'][$i], "../uploads/".$location)) {
+                //Redimensionamiento de imagenes 
+                $nuevo_alto = 700;
+                $nuevo_ancho = 900;
+                $estado_transferencia = false;
+                $img_Original = $_FILES['fotos']['tmp_name'][$i];
+
+                $tipo_extencio = pathinfo($_FILES['fotos']['name'][$i], PATHINFO_EXTENSION);
+                switch ($tipo_extencio) {
+                    case "jpg":
+                        $img_Original = imagecreatefromjpeg($img_Original);
+                        break;
+                    case "png":
+                        $img_Original = imagecreatefrompng($img_Original);
+                        break;
+                }
+
+                $ancho_original = imagesx($img_Original);
+                $alto_original = imagesy($img_Original);
+
+                if (!($ancho_original<=$nuevo_ancho && $alto_original <= $nuevo_alto)) {
+                    if($ancho_original >= $alto_original){
+                        $nuevo_alto = $nuevo_ancho * $alto_original/ $ancho_original;
+                    }else{
+                        $nuevo_ancho = $nuevo_alto * $ancho_original/ $alto_original;
+                    }
+                    $tmp = imagecreatetruecolor($nuevo_ancho,$nuevo_alto);
+                    imagecopyresampled($tmp, $img_Original, 0, 0, 0, 0, floor($nuevo_ancho), floor($nuevo_alto), $ancho_original, $alto_original);
+
+                    switch ($tipo_extencio) {
+                        case 'jpg':
+                            $estado_transferencia = imagejpeg($tmp, "../uploads/".$location, 80);
+                            break;
+                        case 'png':
+                            $estado_transferencia = imagepng($tmp, "../uploads/".$location, 8);
+                            break;
+                    }
+                }else{
+
+                    $estado_transferencia = move_uploaded_file($_FILES['fotos']['tmp_name'][$i], "../uploads/".$location);
+
+                }
+
+
+
+
+                if ($estado_transferencia) {
 
                     $response[$i]->location = $location;
                     $response[$i]->status_code = 200;
