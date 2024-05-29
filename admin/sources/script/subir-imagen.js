@@ -208,6 +208,32 @@ function cargarevemtos() {
             request.onload = (progress) => {
 
                 console.log(`REQUEST (subida): ${request.status} - ${request.statusText}.`);
+
+                switch (request.status) {
+                    case 410:
+                    //Gone - El archivo que se quiere cargar ya no existe.
+                        trash(element.getAttribute("value"));
+                        stateDisplay.innerHTML = `
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                El archivo que se quiere cargar ya no existe. Por favor intente nuevamente.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>`;
+                        break;
+
+                    case 417:
+                    //Expectation failed - Avisar que reintente
+                        // trash(element.getAttribute("value"));
+                        stateDisplay.innerHTML = `
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                No pudieron cargarse los archivos. Por favor reintente la carga.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>`;
+                        break;
+                }
+
+                stateDisplay.scrollIntoView();// Hace un scroll hasta el contenedor de estado (alert en la parte superior)
+
+
                 // let response;
                 // try {
                 //     response = JSON.parse(request.response);
@@ -216,7 +242,7 @@ function cargarevemtos() {
                 //     console.log("ERROR: " + error + " - " + request.response);
                 //     display.innerHTML = "ERROR: " + error + " - " + request.response;
                 // }
-                console.log(request.response)
+                console.log(request.response);
             };
 
             request.open("POST", "system/cargar-imagen.php", true);

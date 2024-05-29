@@ -87,7 +87,7 @@ for ($i = 0; $i < $lines; $i++) {
                 $ancho_original = imagesx($img_Original);
                 $alto_original = imagesy($img_Original);
 
-                if (!($ancho_original<=$nuevo_ancho && $alto_original <= $nuevo_alto)) {
+                if (!($ancho_original<=$nuevo_ancho && $alto_original <= $nuevo_alto)) { //por DeMorgan: ($an_ori > $nue_an || $al_ori > $nue_al)
                     if($ancho_original >= $alto_original){
                         $nuevo_alto = $nuevo_ancho * $alto_original/ $ancho_original;
                     }else{
@@ -95,7 +95,7 @@ for ($i = 0; $i < $lines; $i++) {
                     }
                     $tmp = imagecreatetruecolor($nuevo_ancho,$nuevo_alto);
                     imagecopyresampled($tmp, $img_Original, 0, 0, 0, 0, floor($nuevo_ancho), floor($nuevo_alto), $ancho_original, $alto_original);
-
+                    
                     switch ($tipo_extencio) {
                         case 'jpg':
                             $estado_transferencia = imagejpeg($tmp, "../uploads/".$location, 80);

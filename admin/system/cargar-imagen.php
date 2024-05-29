@@ -12,16 +12,6 @@
     $titulo = $_POST["titulo"];
     $decripcion = $_POST["decripcion"];
 
-    /*
-    // -- Comprime la imagen y ajusta su tamaño (No deben ser mayores a 300 kB)(El lado largo no debe ser mayor a 1200 px) -- //
-
-    if (filesize("../uploads/$direccion") > 300000) {// mayor que 300 mil bytes
-        imagejpeg($newImage, 'imagen_optimizada.jpg', 80)
-    }
-
-    // -- Intenta guardar la imagen en la carpeta 'ArchivoDigital' (ubicada en root) -- //
-    */
-
     try {
         /* -- Genera el nombre de la foto (basado en el tiempo actual) -- */
         $time = date_create("now", timezone_open('America/Argentina/Buenos_Aires'));
@@ -30,10 +20,13 @@
         $new_location .= date_format($time, 'YmdHisu');//FOMATO: '[PRE-yyyymmddhhiissuuuuuu]' Año, mes, dia (Nro), hora en formato 24, minutos, segundos, milisegundos en formato de 6 decimales
         $new_location .= "." . pathinfo($direccion, PATHINFO_EXTENSION);
 
+        if (file_exists("../uploads/$direccion"))
+            rename("../uploads/$direccion", "../../ArchivoDigital/$new_location");
+        else {
+            http_response_code(410);// El archivo que se quiere subir ya no existe (HTTP 410 -> "GONE")
+            die();
+        }
         
-
-        rename("../uploads/$direccion", "../../ArchivoDigital/$new_location");
-
     } catch (\Throwable $th) {
 
         http_response_code(417);
@@ -64,7 +57,7 @@
             $qry .= "(0,0);";
 
             $consulta = mysqli_query($link, $qry);
-            if (!consulta) {
+            if (!$consulta) {
                 http_response_code(417);
                 die();
             }
