@@ -81,7 +81,7 @@
             <hr class="mt-1 mb-0">
         </span>
 
-        <!-- Contenedor para las tarjretas de imagen (generadas mediante js) -->
+        <!-- Contenedor para las tarjetas de imagen (generadas mediante js) -->
         <div class="row justify-content-center px-2" id="Display"></div>
 
         <!-- Placeholder (aparece cuando #Display está vacía) -->

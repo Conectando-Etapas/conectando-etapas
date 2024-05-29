@@ -7,20 +7,13 @@
         die();
     }
 
+
     $direccion = $_POST["direccion"];
-    $fecha = $_POST["fecha"];
-    $titulo = $_POST["titulo"];
-    $decripcion = $_POST["decripcion"];
-
-    /*
-    // -- Comprime la imagen y ajusta su tamaño (No deben ser mayores a 300 kB)(El lado largo no debe ser mayor a 1200 px) -- //
-
-    if (filesize("../uploads/$direccion") > 300000) {// mayor que 300 mil bytes
-        imagejpeg($newImage, 'imagen_optimizada.jpg', 80)
-    }
-
-    // -- Intenta guardar la imagen en la carpeta 'ArchivoDigital' (ubicada en root) -- //
-    */
+    $fecha = (!empty( $_POST["fecha"]) ) ? $_POST["fecha"] : "Desconocida";
+    $titulo = (!empty( $_POST["titulo"]) ) ? $_POST["titulo"] : "Imagen no etiquetada";
+    $decripcion = (!empty( $_POST["decripcion"]) ) ? $_POST["decripcion"] : "No existe aún descripción de la imágen";
+    if (isset($_POST["CATEGORIA"]))
+        $categorias = $_POST["CATEGORIA"];
 
     try {
         /* -- Genera el nombre de la foto (basado en el tiempo actual) -- */
@@ -30,10 +23,13 @@
         $new_location .= date_format($time, 'YmdHisu');//FOMATO: '[PRE-yyyymmddhhiissuuuuuu]' Año, mes, dia (Nro), hora en formato 24, minutos, segundos, milisegundos en formato de 6 decimales
         $new_location .= "." . pathinfo($direccion, PATHINFO_EXTENSION);
 
+        if (file_exists("../uploads/$direccion"))
+            rename("../uploads/$direccion", "../../ArchivoDigital/$new_location");
+        else {
+            http_response_code(410);// El archivo que se quiere subir ya no existe (HTTP 410 -> "GONE")
+            die();
+        }
         
-
-        rename("../uploads/$direccion", "../../ArchivoDigital/$new_location");
-
     } catch (\Throwable $th) {
 
         http_response_code(417);
@@ -55,31 +51,32 @@
                 die();
             }
             $datos = mysqli_fetch_array($consulta);
-            $qry = "INSERT INTO tiene_categoria (id_imagen, id_categoria) VALUES ";
 
             /* -- Cargar la consulta para agregar las categorias a su tabla -- */
-            foreach ($_POST['CATEGORIA'] as $categoria) {
-                $qry .= "($datos[0], $categoria), ";
-            }
-            $qry .= "(0,0);";
+            if (isset($categorias)) {
 
-            $consulta = mysqli_query($link, $qry);
-            if (!consulta) {
-                http_response_code(417);
-                die();
+                $qry = "INSERT INTO tiene_categoria (id_imagen, id_categoria) VALUES ($datos[0],$categorias[0])";
+                for ($i = 1; $i < count($categorias); $i++) {
+                    $qry .= ", ($datos[0], $categorias[$i])";
+                }
+
+                unset($consulta);
+                $consulta = mysqli_query($link, $qry);
+                if (!$consulta) {
+                    http_response_code(417);
+                    $consulta = mysqli_query($link, "DELETE * FROM imagen WHERE ubicacion = '$new_location';");
+                    die();
+                }
             }
+
         }
 
     } catch (\Throwable $th) {
 
         http_response_code(417);
+        unlink("../../ArchivoDigital/$new_location");
         echo $th;
         die();
     }
-
-
-
-
-
 
 ?>
