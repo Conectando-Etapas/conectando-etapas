@@ -7,10 +7,13 @@
         die();
     }
 
+
     $direccion = $_POST["direccion"];
-    $fecha = $_POST["fecha"];
-    $titulo = $_POST["titulo"];
-    $decripcion = $_POST["decripcion"];
+    $fecha = (!empty( $_POST["fecha"]) ) ? $_POST["fecha"] : "Desconocida";
+    $titulo = (!empty( $_POST["titulo"]) ) ? $_POST["titulo"] : "Imagen no etiquetada";
+    $decripcion = (!empty( $_POST["decripcion"]) ) ? $_POST["decripcion"] : "No existe aún descripción de la imágen";
+    if (isset($_POST["CATEGORIA"]))
+        $categorias = $_POST["CATEGORIA"];
 
     try {
         /* -- Genera el nombre de la foto (basado en el tiempo actual) -- */
@@ -48,31 +51,32 @@
                 die();
             }
             $datos = mysqli_fetch_array($consulta);
-            $qry = "INSERT INTO tiene_categoria (id_imagen, id_categoria) VALUES ";
 
             /* -- Cargar la consulta para agregar las categorias a su tabla -- */
-            foreach ($_POST['CATEGORIA'] as $categoria) {
-                $qry .= "($datos[0], $categoria), ";
-            }
-            $qry .= "(0,0);";
+            if (isset($categorias)) {
 
-            $consulta = mysqli_query($link, $qry);
-            if (!$consulta) {
-                http_response_code(417);
-                die();
+                $qry = "INSERT INTO tiene_categoria (id_imagen, id_categoria) VALUES ($datos[0],$categorias[0])";
+                for ($i = 1; $i < count($categorias); $i++) {
+                    $qry .= ", ($datos[0], $categorias[$i])";
+                }
+
+                unset($consulta);
+                $consulta = mysqli_query($link, $qry);
+                if (!$consulta) {
+                    http_response_code(417);
+                    $consulta = mysqli_query($link, "DELETE * FROM imagen WHERE ubicacion = '$new_location';");
+                    die();
+                }
             }
+
         }
 
     } catch (\Throwable $th) {
 
         http_response_code(417);
+        unlink("../../ArchivoDigital/$new_location");
         echo $th;
         die();
     }
-
-
-
-
-
 
 ?>

@@ -110,7 +110,9 @@ unset($_SESSION['flag']);
         </div>
         <div class="d-flex justify-content-center align-items-center align-items-center position-fixed top-0 start-0" id="modal-container">
         <div class="px-2 py-2  p-3 rounded position-relative" id="modal">
-            <div class="btn   position-absolute top-0 end-0" id="cerrar_modal">X</div>
+            <div class="btn   position-absolute top-0 end-0" id="cerrar_modal">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+            </div>
                 <div class="row m-2  border-bottom">
                 <div class="col-12 fs-4 text-center" id="titulo-modal"></div>
                 </div>

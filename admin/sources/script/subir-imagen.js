@@ -212,7 +212,6 @@ function cargarevemtos() {
                 switch (request.status) {
                     case 410:
                     //Gone - El archivo que se quiere cargar ya no existe.
-                        trash(element.getAttribute("value"));
                         stateDisplay.innerHTML = `
                             <div class="alert alert-danger alert-dismissible fade show">
                                 El archivo que se quiere cargar ya no existe. Por favor intente nuevamente.
@@ -222,17 +221,25 @@ function cargarevemtos() {
 
                     case 417:
                     //Expectation failed - Avisar que reintente
-                        // trash(element.getAttribute("value"));
                         stateDisplay.innerHTML = `
                             <div class="alert alert-danger alert-dismissible fade show">
-                                No pudieron cargarse los archivos. Por favor reintente la carga.
+                                No pudo cargarse el archivo. Por favor reintente la carga.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>`;
+                        break;
+
+                    case 200:
+                        stateDisplay.innerHTML = `
+                            <div class="alert alert-success alert-dismissible fade show">
+                                El archivo fue publicado satisfactoriamente.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>`;
                         break;
                 }
 
-                stateDisplay.scrollIntoView();// Hace un scroll hasta el contenedor de estado (alert en la parte superior)
-
+                trash(element.getAttribute("value"));
+                if (request.status != 200)
+                    stateDisplay.scrollIntoView();// Hace un scroll hasta el contenedor de estado (alert en la parte superior)
 
                 // let response;
                 // try {
