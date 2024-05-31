@@ -13,7 +13,7 @@ function mandarreacionsDB(id, reaccion){
     let formData = new FormData
     formData.append("ID", id);
     formData.append("reaccion", reaccion)
-    fetch('http://localhost/system/subirReacciones.php',{
+    fetch('./system/subirReacciones.php',{
         method: "post",
         body: formData, 
     })

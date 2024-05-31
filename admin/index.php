@@ -216,7 +216,9 @@ include "includes/head_settings.php"
         </div>
     </div>
 
+</main>
 
+<script src="./system/gestionSitio.js"></script>
 
 <?php
 include "./includes/footer.php";

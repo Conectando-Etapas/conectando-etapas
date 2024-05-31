@@ -52,24 +52,25 @@ if(isset($_POST["where"]) || (isset($_SESSION['flag']) && $_SESSION['flag'] == t
         $res = mysqli_query($link,"SELECT `id_img`, `ubicacion` FROM `imagen` WHERE `id_img` > $id LIMIT 36" );
     }else{
         $where = crearConsulta();
-    $res = mysqli_query($link, "SELECT DISTINCT `imagen`.`id_img`, `imagen`.`ubicacion`, `tiene_categoria`.`id_categoria`
-    FROM `imagen` 
-        LEFT JOIN `tiene_categoria` ON `tiene_categoria`.`id_imagen` = `imagen`.`id_img`
-        WHERE $where[0]  AND imagen.id_img > $id
-        GROUP BY id_imagen
-        LIMIT 36");
-    if(isset($where[1])){
-        $res2 = mysqli_query($link,"SELECT `id_categoria`, `nombre` FROM `categoria` WHERE $where[1] " );
-        while ($datos = mysqli_fetch_array($res2)) {
-            $cat = new imagen($datos[0],$datos[1]); 
-            $jsonImg[1][] = $cat;
-        } 
-        
-    }
+        $res = mysqli_query($link, "SELECT DISTINCT `imagen`.`id_img`, `imagen`.`ubicacion`, `tiene_categoria`.`id_categoria`
+        FROM `imagen` 
+            LEFT JOIN `tiene_categoria` ON `tiene_categoria`.`id_imagen` = `imagen`.`id_img`
+            WHERE $where[0]  AND imagen.id_img > $id
+            GROUP BY id_imagen
+            LIMIT 36");
+        if(isset($where[1])){
+            $res2 = mysqli_query($link,"SELECT `id_categoria`, `nombre` FROM `categoria` WHERE $where[1] " );
+            
+            while ($datos = mysqli_fetch_array($res2)) {
+                $cat = new imagen($datos[0],$datos[1]); 
+                $jsonImg[1][] = $cat;
+            }
+            
+        }
     }
 
 }else{
-    $res = mysqli_query($link,"SELECT `id_img`, `ubicacion` FROM `imagen` WHERE `id_img` > $id LIMIT 36" ); 
+    $res = mysqli_query($link, "SELECT `id_img`, `ubicacion` FROM `imagen` WHERE `id_img` > $id LIMIT 36"); 
 }
 
 
