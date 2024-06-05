@@ -103,11 +103,11 @@ var editorAnecDos = new Quill('#infoAnecDos', {
         document.getElementById("imgsMuestra").addEventListener('click', (event)=>{
 
             if(event.target.classList.contains("delete")){
-                let info = ["imagen", 1, event.target.value]
-                ajax(info)
-
                 let nodoPadre = document.getElementById("padreImgs")
                 let nodo = document.getElementById(`img-fila-${event.target.value}`)
+                
+                let info = ["imagen", 1, event.target.value, nodo.getAttribute("value")]
+                ajax(info)
                 nodoPadre.removeChild(nodo);
             }
 

@@ -61,7 +61,11 @@ function DELETE($informacion){
             break;
 
         case 'imagen':
-            $delete = "DELETE FROM `imagen` WHERE id_img = $informacion[2]";
+            $imgLocation = "../../ArchivoDigital/" . $informacion[3];
+            if (file_exists($imgLocation) && unlink($imgLocation))
+                $delete = "DELETE FROM `imagen` WHERE id_img = $informacion[2]";
+            else
+                die();
             break;
     }
     return $delete;

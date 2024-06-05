@@ -296,8 +296,8 @@ include "includes/head_settings.php"
                                     while($datosImg = mysqli_fetch_array($resImg)){
                                 ?>
 
-                                    <tr id="img-fila-<?php echo $datosImg[0];?>">
-                                        <td  data-bs-toggle="modal" data-bs-target="#vistaPrevia" ><a href="#" onclick="switchImg('<?php echo $datosImg[2]; ?>')">Vista Previa</a></td>
+                                    <tr id="img-fila-<?php echo $datosImg[0];?>" value="<?php echo $datosImg[2]; ?>">
+                                        <td class="text-decoration-underline text-primary clickable" data-bs-toggle="modal" data-bs-target="#vistaPrevia" onclick="switchImg('<?php echo $datosImg[2]; ?>')">Vista Previa</td>
                                         <td><?php echo $datosImg[1]; ?></td>
                                         <td><button id ="imgMod-<?php echo $datosImg[0]; ?>" type="button" class="btn btn-warning update">Modificar</button></td>
                                         <td><button value="<?php echo $datosImg[0]; ?>" type="button" class="btn btn-danger delete">Eliminar</button></td>
