@@ -56,3 +56,16 @@ body {
     max-height: 70vh;
     overflow-y: auto;
 }
+
+.quillEditor .ql-editor{
+    height: 250px;
+    min-height: 250px;
+    resize: vertical;
+
+    font-size: larger;
+}
+
+#modalImg {
+    max-width: 80vw !important;
+    max-height: 80vh !important;
+}

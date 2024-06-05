@@ -4,7 +4,6 @@ include "../includes/db_con.php";
 $info = json_decode($_POST['array']);
 // $info = ["anecdotas", 0, "titulo", "autor", "fecha", "informacion"];
 
-
 $sql = craerSQL($info);
 
 echo mysqli_query($link, $sql);
@@ -22,6 +21,10 @@ switch ($informacion[1]) {
         break;
     case 1:
         $sql = DELETE($informacion);
+        break;
+    
+    case 2:
+        $sql = UPDATE($informacion);
         break;
 }
 
@@ -56,8 +59,26 @@ function DELETE($informacion){
         case 'orientacion':
             $delete = "DELETE FROM `orientacion` WHERE id_orientacion = $informacion[2]";
             break;
+
+        case 'imagen':
+            $delete = "DELETE FROM `imagen` WHERE id_img = $informacion[2]";
+            break;
     }
     return $delete;
+}
+
+function UPDATE($informacion) {
+    $update = "";
+    switch ($informacion[0]) {
+        case 'anecdotas':
+            $update = "UPDATE `anecdota` SET `titulo`='$informacion[3]',`portada`='1',`contenido`='$informacion[6]',`autor`='$informacion[4]',`fecha`='$informacion[5]' WHERE `id_anec` = '$informacion[2]'";
+            break;
+        case 'imagen':
+            $update = "";
+            break;    
+    }
+
+    return $update;
 }
 
 

@@ -116,10 +116,7 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
   </div>
   <hr>
 
-    <div class="dropdown">
-      <button class="btn btn-primary mx-auto fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#anec" aria-controls="anec" aria-expanded="true" aria-label="Toggle navigation">
-        Mostrar/esconder anécdotas
-      </button>
+    
         
       <div class="row mt-3 mb-3 rounded collapse show" id="anec">
             
@@ -183,8 +180,6 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
           }
         ?>
 
-        
-      </div>
     </div>
 
     </main>
@@ -257,6 +252,8 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
           margin: 0,
           responsiveClass: true,
           nav: false,
+          autoplay: true,
+          autoplayHoverPause: true,
           responsive: {
             0: {
               items: 1,
