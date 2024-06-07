@@ -4,9 +4,10 @@ include_once 'includes/db_con.php';
 $consultas = mysqli_query($link, "SELECT * FROM `consulta` ORDER BY `consulta`.`fecha` ASC");
 $qryAnect = "SELECT `id_anec`, `titulo`, `autor`, `fecha`, `contenido` FROM `anecdota`";
 $qryImg = "SELECT `id_img`, `titulo`, `ubicacion` FROM `imagen`";
+$qryCategoria = "SELECT `id_categoria`, `nombre`, `descripcion` FROM `categoria`";
 
 $title_name = "Administrador EEST 2";
-include "includes/head_settings.php"
+include "includes/head_settings.php";
 ?>
 
 <!-- Modal. Ventana emergente que muestra la ayuda (punteo tutorial) -->
@@ -189,18 +190,19 @@ include "includes/head_settings.php"
                                 
                                 <!-- Inserción -->
                                 <div class="tab-pane fade show active" id="anec-vPills-insert" role="tabpanel" aria-labelledby="anec-vPills-insert-tab" tabindex="0">
+                                    <h5 class="form-title">Nueva Anécdota</h5>
 
                                     <div class="mb-3">
-                                        <label for="anecTitulo" class="form-label">Portada</label>
-                                        <input type="text" class="form-control" id="anecTitulo" maxlength="30">
+                                        <label for="anecTitulo" class="form-label">Titulo</label>
+                                        <input type="text" class="form-control" id="anecTitulo" maxlength="40" placeholder="Agregue una frase corta que distinga esta historia" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="anecautor" class="form-label">Autor</label>
-                                        <input type="text" class="form-control" id="anecautor" maxlength="30">
+                                        <input type="text" class="form-control" id="anecautor" maxlength="30" placeholder="Ej.: Ricardo (Richard) Feinmann" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="anecfecha" class="form-label" >Fecha</label>
-                                        <input type="date" class="form-control" id="anecfecha" maxlength="20">
+                                        <input type="text" class="form-control" id="anecfecha" maxlength="20" placeholder="Fecha aproximada" required>
                                     </div>
                                     <div class="quillEditor" id="infoAnec"></div>
                                     <button class="btn btn-primary mt-3 subir" id="subirAnec">Subir</button>
@@ -211,7 +213,8 @@ include "includes/head_settings.php"
                                 <div class="tab-pane fade" id="anec-vPills-update" role="tabpanel" aria-labelledby="anec-vPills-update-tab" tabindex="0">
                                     <!-- Listado de opciones a modificar -->
                                     <label class="form-label">Seleccione la anécdota a modificar</label>
-                                    <select class="form-select" id="selectAnecMod">
+                                    <select class="form-select mb-5" id="selectAnecMod">
+                                        <option value="">Seleccione una anécdota de la lista</option>
                                     <?php
                                         $resAnect = mysqli_query($link, $qryAnect);
                                         while($datosAnec = mysqli_fetch_assoc($resAnect)){
@@ -224,16 +227,16 @@ include "includes/head_settings.php"
 
                                     <input type="hidden" id="idAnecMod">
                                     <div class="mb-3">
-                                        <label for="anecTitulo" class="form-label">Portada</label>
-                                        <input type="text" class="form-control" id="anecTituloMod" maxlength="30">
+                                        <label for="anecTitulo" class="form-label">Título</label>
+                                        <input type="text" class="form-control" id="anecTituloMod" placeholder="Elija una anécdota para comenzar a editar" maxlength="40">
                                     </div>
                                     <div class="mb-3">
                                         <label for="anecautor" class="form-label">Autor</label>
-                                        <input type="text" class="form-control" id="anecAutorMod" maxlength="30">
+                                        <input type="text" class="form-control" id="anecAutorMod" placeholder="Elija una anécdota para comenzar a editar" maxlength="30">
                                     </div>
                                     <div class="mb-3">
                                         <label for="anecfecha" class="form-label" >Fecha</label>
-                                        <input type="text" class="form-control" id="anecFechaMod" maxlength="20">
+                                        <input type="text" class="form-control" id="anecFechaMod" placeholder="Elija una anécdota para comenzar a editar" maxlength="20">
                                     </div>
                                     <div class="quillEditor" id="infoAnecDos"></div>
                                     <button class="btn btn-primary mt-3 subir" id="modifAnec">Actualizar</button>
@@ -281,33 +284,88 @@ include "includes/head_settings.php"
 
                     <!-- Panel de imágenes -->
                     <div class="tab-pane fade" id="img-tab-pane" role="tabpanel" aria-labelledby="img-tab" tabindex="0">
-                        <div class="d-flex justify-content-between align-items-start" style="height: 250px; overflow-y: scroll;">
+                        <div class="row justify-content-center align-items-start">
                             
-                            <!-- Listado de Imágenes para su posterior borrado y/o modificación -->
-                            <table class="table table-striped" id="imgsMuestra">
-                                <thead class="sticky-top">
-                                    <tr>
-                                        <th scope="col" colspan="4">Listado de imágenes</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="padreImgs">
-                                <?php
-                                    $resImg = mysqli_query($link, $qryImg);
-                                    while($datosImg = mysqli_fetch_array($resImg)){
-                                ?>
+                            <div class="col-10 py-5">
+                                <!-- Listado de Imágenes para su posterior borrado y/o modificación -->
+                                <h5>Listado de imágenes</h5>
+                                <div class="mb-5" style="max-height: 250px; overflow-y: auto;">
+                                    <table class="table table-striped" id="imgsMuestra">
+                                        <tbody id="padreImgs">
+                                        <?php
+                                            $resImg = mysqli_query($link, $qryImg);
+                                            while($datosImg = mysqli_fetch_array($resImg)){
+                                        ?>
 
-                                    <tr id="img-fila-<?php echo $datosImg[0];?>" value="<?php echo $datosImg[2]; ?>">
-                                        <td class="text-decoration-underline text-primary clickable" data-bs-toggle="modal" data-bs-target="#vistaPrevia" onclick="switchImg('<?php echo $datosImg[2]; ?>')">Vista Previa</td>
-                                        <td><?php echo $datosImg[1]; ?></td>
-                                        <td><button id ="imgMod-<?php echo $datosImg[0]; ?>" type="button" class="btn btn-warning update">Modificar</button></td>
-                                        <td><button value="<?php echo $datosImg[0]; ?>" type="button" class="btn btn-danger delete">Eliminar</button></td>
-                                    </tr>
+                                            <tr id="img-fila-<?php echo $datosImg[0];?>" value="<?php echo $datosImg[2]; ?>">
+                                                <td class="text-decoration-underline text-primary clickable" data-bs-toggle="modal" data-bs-target="#vistaPrevia" onclick="switchImg('<?php echo $datosImg[2]; ?>')">Vista Previa</td>
+                                                <td><?php echo $datosImg[1]; ?></td>
+                                                <td><button value = "<?php echo $datosImg[0]; ?>" type="button" class="btn btn-warning update">Modificar</button></td>
+                                                <td><button value = "<?php echo $datosImg[0]; ?>" type="button" class="btn btn-danger delete">Eliminar</button></td>
+                                            </tr>
 
-                                <?php } ?>
-                                </tbody>
-                            </table>
+                                        <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
 
-                            <!-- Formulario de modificación -->
+
+                                <!-- Formulario de modificación -->
+                                <h5 class="form-title mt-5 mt-md-0">Datos de la imágen</h5>
+                                <form action="./system/updateImagen.php" method="post">
+                                    <!-- Datos iniciales -->
+
+                                    <input type="hidden" name="idImg" id="idImg" value="" required>
+                                    <div class="mb-3">
+                                        <label for="fechaImg" class="form-label">Fecha aproximada</label>
+                                        <input type="text" class="form-control" id="fechaImg" name="fecha" placeholder="Fecha aproximada." required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="tituloImg" class="form-label">Título para la imagen</label>
+                                        <input type="text" class="form-control" id="tituloImg" name="titulo" placeholder="Frase corta que define la imágen.">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="descripcionImg" class="form-label">Descripción</label>
+                                        <textarea class="form-control" id="descripcionImg" name="descripcion" rows="3" placeholder="Ej. Un recuerdo de la 5a edición de ExpoTécnica. Podemos apreciar los preparativos para la feria."></textarea>
+                                    </div>
+
+                                    <div class="mb-3 imgCard px-3">
+                                        <label class="form-label">Categorías (seleccione varias)</label>
+                                        
+                                        <!-- Categorias (pills) -->
+                                        <div class="contCategorias row justify-content-around mb-3" id="contCategorias">
+                                        <?php
+                                            $resCateg = mysqli_query($link, $qryCategoria);
+                                            while($datosCateg = mysqli_fetch_assoc($resCateg)){
+                                        ?>
+                                        <input
+                                            type="checkbox"
+                                            name="CATEGORIA[]"
+                                            id="categoria-<?php echo $datosCateg['id_categoria']; ?>"
+                                            value="<?php echo $datosCateg['id_categoria']; ?>"
+                                        >
+                                        <label
+                                            class="badge rounded-pill col-auto mb-1"
+                                            for="categoria-<?php echo $datosCateg['id_categoria']; ?>"
+                                            title="<?php echo $datosCateg['descripcion']; ?>"
+                                        >
+                                            <?php echo $datosCateg['nombre']; ?>
+                                        </label>
+
+                                        <?php } ?>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3 row justify-content-center">
+                                        <input type="submit" class="img-submit btn btn-primary col-10 col-sm-8 col-md-6 col-lg-4" name="submit" value="Subir imágen">
+                                    </div>
+
+                                    
+                                </form>
+                            </div>
 
                         </div>
                     </div>

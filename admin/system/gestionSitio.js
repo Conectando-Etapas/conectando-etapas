@@ -43,7 +43,7 @@ var editorAnecDos = new Quill('#infoAnecDos', {
         document.getElementById("selectAnecMod").addEventListener('change', (event)=>{
 
             let data = new FormData;
-            let a = JSON.stringify([event.target.value]);
+            let a = JSON.stringify([0, event.target.value]);
             data.append('info', a);
 
             fetch('./system/cargarAnec.php',{
@@ -97,19 +97,49 @@ var editorAnecDos = new Quill('#infoAnecDos', {
         document.getElementById("modalImg").setAttribute('src', `../ArchivoDigital/${foto}`);
     }
 
-    //Cosas...
+    //botones de Eliminar y Modificar
+    document.getElementById("imgsMuestra").addEventListener('click', (event)=>{
+        
+        let nodoPadre = document.getElementById("padreImgs")
+        let nodo = document.getElementById(`img-fila-${event.target.value}`)
+        
+        //eliminar
+        if(event.target.classList.contains("delete")){
+            
+            let info = ["imagen", 1, event.target.value, nodo.getAttribute("value")]
+            ajax(info)
+            nodoPadre.removeChild(nodo);
+        }
 
-    //eliminar
-        document.getElementById("imgsMuestra").addEventListener('click', (event)=>{
 
-            if(event.target.classList.contains("delete")){
-                let nodoPadre = document.getElementById("padreImgs")
-                let nodo = document.getElementById(`img-fila-${event.target.value}`)
+        //Cargar formulario de modificacion
+        if (event.target.classList.contains("update")) {
+            let data = new FormData;
+            let a = JSON.stringify([1, event.target.getAttribute("value")]);
+            data.append('info', a);
+
+            fetch('./system/cargarAnec.php',{
+                method: "POST",
+                body: data
+            })
+            .then(res => res.json())
+            .then(res => {
+                // Cargo los inputs
+                document.getElementById("idImg").value = event.target.getAttribute("value");
+                document.getElementById("fechaImg").value = res[0].fecha;
+                document.getElementById("tituloImg").value = res[0].titulo;
+                document.getElementById("descripcionImg").innerHTML = res[0].descripcion;
                 
-                let info = ["imagen", 1, event.target.value, nodo.getAttribute("value")]
-                ajax(info)
-                nodoPadre.removeChild(nodo);
-            }
+                // Cargo las pills de categoría
+                if (res[1] != null) {
+                    res[1].forEach(elmt => {
+                        document.getElementById(`categoria-${elmt}`).checked = true;
+                    });
+                }
+            })
+
+
+        }
 
         });
 
@@ -186,6 +216,7 @@ var editorAnecDos = new Quill('#infoAnecDos', {
         })
         .then(res => res.json())
         .then(res => {
+            return res
             // console.log(res); // usar SOLO en fase de desarrollo
         })
     }

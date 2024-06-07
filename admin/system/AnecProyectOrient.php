@@ -75,11 +75,9 @@ function UPDATE($informacion) {
     $update = "";
     switch ($informacion[0]) {
         case 'anecdotas':
+            $informacion = str_replace("'", "''", $informacion);
             $update = "UPDATE `anecdota` SET `titulo`='$informacion[3]',`portada`='1',`contenido`='$informacion[6]',`autor`='$informacion[4]',`fecha`='$informacion[5]' WHERE `id_anec` = '$informacion[2]'";
             break;
-        case 'imagen':
-            $update = "";
-            break;    
     }
 
     return $update;

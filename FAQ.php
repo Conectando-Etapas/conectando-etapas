@@ -106,7 +106,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-5 bg-light p-3"><!-- Formulario de consulta -->
-                <form action="system/enviar_consulta.php" method="post">
+                <form action="./system/enviar_consulta.php" method="post">
                     
                     <h3>¿Tiene alguna consulta?</h3>
                     <p>Escríbanos y le responderemos lo más pronto posible.</p>

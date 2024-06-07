@@ -67,7 +67,8 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
     </header>
 
   <main class="container-fluid text-center mt-4">
-    <h1 class="col-12">Anécdotas</h1>
+    <h2 class="col-12 mt-3">Siete décadas de historias</h2>
+    <h5>Recopilamos para vos las mejores anécdotas de estos 70 años</h5>
 
   <div class="gtco-testimonials" style="width: 100vw;">
     <div class="owl-carousel owl-carousel1 owl-theme">
