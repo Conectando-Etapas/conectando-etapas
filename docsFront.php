@@ -29,7 +29,7 @@
     <header class="header row">
         <nav class="navbar navbar-expand-lg p-4 fixed-top" id="menu">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./"><span>EEST Nº2</span></a>
+                <a class="navbar-brand" href="./index.php"><span>EEST Nº2</span><img src="sources/images/logo_trans.png" alt="" class="img-header"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#extendNav" aria-controls="extendNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
