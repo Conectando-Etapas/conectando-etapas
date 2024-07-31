@@ -72,9 +72,10 @@ if(event.target.classList.contains("img")){
 
 document.getElementById("cerrar_modal").addEventListener("click", ()=>{
   document.getElementById("modal-container").classList.remove("show")
-  document.getElementById("img-modal").src = ""
+  document.getElementById("img-modal").src = "";
   document.getElementById("titulo-modal").innerHTML = "";
-document.getElementById("texto-modal").innerHTML = ""
+document.getElementById("texto-modal").innerHTML = "";
+document.getElementById("fecha-modal").innerHTML="";
 document.getElementById("recomendados").style.display = "none";
 
 })
@@ -92,7 +93,9 @@ function buscraImgEspecifica(idEspecifica) {
 .then(resp => {
 console.log(resp)
 document.getElementById("titulo-modal").innerHTML = resp[0];
-document.getElementById("texto-modal").innerHTML = resp[2]
+document.getElementById("fecha-modal").innerHTML = resp[1];
+document.getElementById("texto-modal").innerHTML = resp[2];
+
 })
 }
 
@@ -124,7 +127,7 @@ function buscraImg(tipo = null, busqueda = null,) {
       element.classList.add("row");
       
       for (const ele of res[0]) {
-        element.innerHTML += `<div class="col-12 col-sm-6 col-md-4 col-xl-3 pb-3"><img id="${ele.ID}" loading="lazy" class="img rounded " src="./ArchivoDigital/${ele.Direccion}" alt=""></div>`;
+        element.innerHTML += `<div class="col-12 col-sm-6 col-md-4 col-xl-3 pb-3"><img id="${ele.ID}" loading="lazy" class="img rounded " src="./imagenes/${ele.Direccion}" alt=""></div>`;
       }
 
       if (res[1] != null) {

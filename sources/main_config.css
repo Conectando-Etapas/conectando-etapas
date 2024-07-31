@@ -146,8 +146,11 @@ width: 100vw;
 #modal{
     background-color: #FFF;
     max-width: 80vw;
-    max-height: 80vh;
+    max-height: 100vh;
 
+}
+#fecha-modal{
+    color: #545454;
 }
 
 .font-left, .font-right{
