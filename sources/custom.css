@@ -1,6 +1,6 @@
 body {
   padding: 0px !important;
-    font-family: Cantarell;
+    font-family: Nunito, Cantarell, Calibri;
     overflow-x: hidden;
     display: grid;
     /* grid-template-rows: auto auto 70px; */
