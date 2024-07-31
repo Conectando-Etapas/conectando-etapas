@@ -64,7 +64,7 @@
                     <p>¿Querés inscribirte? ¡Descargá e imprimí este documento y llenalo!</p>
                 </div>
                 <div class="col-12 col-md-4 offset-md-1 mt-3">
-                    <a class="btn btn-outline-primary btn-lg" href="#" role="button" id="downloadInsc" name="downloadInsc"><i class="fa-solid fa-download fa-bounce" style="color: #005eff;"></i> Descargar Inscripción.</a>
+                    <a class="btn btn-outline-primary btn-lg" target="_blank" href="./planilla-inscripcion.pdf" role="button" id="downloadInsc" name="downloadInsc"><i class="fa-solid fa-download fa-bounce" style="color: #005eff;"></i> Descargar Inscripción</a>
                 </div>
             </div>
             <div class="row fs-4 my-5">
@@ -72,7 +72,7 @@
                     <p>¿Querés rematricularte? ¡Descargá e imprimí este documento y llenalo!</p>
                 </div>
                 <div class="col-12 col-md-4 offset-md-1 mt-3">
-                <a class="btn btn-outline-primary btn-lg" href="#" role="button" id="downloadMatr" name="downloadMatr"><i class="fa-solid fa-download fa-bounce" style="color: #005eff;"></i> Descargar Matrícula.</a>
+                    <a class="btn btn-outline-primary btn-lg" target="_blank" href="./planilla-matriculacion.pdf" role="button" id="downloadMatr" name="downloadMatr"><i class="fa-solid fa-download fa-bounce" style="color: #005eff;"></i> Descargar Matrícula</a>
                 </div>
             </div>
             <small class="text-muted">Posteriormente, los documentos deberan ser entregados en la institución en época de inscripciones. <br>
