@@ -67,7 +67,8 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
     </header>
 
   <main class="container-fluid text-center mt-4">
-    <h1 class="col-12">Anécdotas</h1>
+    <h2 class="col-12 mt-3">Siete décadas de historias</h2>
+    <h5>Recopilamos para vos las mejores anécdotas de estos 70 años</h5>
 
   <div class="gtco-testimonials" style="width: 100vw;">
     <div class="owl-carousel owl-carousel1 owl-theme">
@@ -116,10 +117,7 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
   </div>
   <hr>
 
-    <div class="dropdown">
-      <button class="btn btn-primary mx-auto fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#anec" aria-controls="anec" aria-expanded="true" aria-label="Toggle navigation">
-        Mostrar/esconder anécdotas
-      </button>
+    
         
       <div class="row mt-3 mb-3 rounded collapse show" id="anec">
             
@@ -183,8 +181,6 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
           }
         ?>
 
-        
-      </div>
     </div>
 
     </main>
@@ -257,6 +253,8 @@ $anec_fetch = mysqli_query($link, "SELECT * FROM anecdota");
           margin: 0,
           responsiveClass: true,
           nav: false,
+          autoplay: true,
+          autoplayHoverPause: true,
           responsive: {
             0: {
               items: 1,

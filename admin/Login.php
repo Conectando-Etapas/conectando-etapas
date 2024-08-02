@@ -1,21 +1,26 @@
+<?php
+$login = "login";
+include "./includes/head_settings.php";
+/*
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="<?php echo ($dark_mode) ? 'dark' : 'light'; ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/www/sources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./sources/css/bootstrap.min.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="http://localhost/admin/sources/styles/custom.css">
+    <link rel="stylesheet" href="./admin/sources/styles/custom.css">
     <script src="https://kit.fontawesome.com/e7401517de.js" crossorigin="anonymous"></script>
     
     <link rel="shortcut icon" href="http://localhost/www/sources/images/favicon.png" type="image/x-icon">
-    <title>Iniciar Sesión - Administracion EEST N°2</title>
-</head>
-<body class="container-fluid">
-    <header class="row">
-        <img class="col-auto" src="http://localhost/www/sources/images/logo_trans.png" alt="404" height="60px">
-    </header>
-
+    <title>Iniciar Sesión - Administración EEST N°2</title>
+    </head>
+    <body class="container-fluid">
+        <header class="row">
+            <img class="col-auto" src="http://localhost/www/sources/images/logo_trans.png" alt="404" height="60px">
+            </header>
+            
+        */?>
     <main class="row justify-content-center pt-5" style="color: #1B036D;">
         <div class="col-10">
             <div class="row">
@@ -27,7 +32,7 @@
                 <div class="col-12">
                     <div class="card border-secondary mb-3">
                         <div class="card-body">
-                            <form action="ValidarLogin.php" method="post">
+                            <form action="./system/ValidarLogin.php" method="post">
                                 
                                 <?php
                                         if(isset($_GET['error']))
@@ -62,5 +67,5 @@
 
 <?php
 
-include "includes/footer.php";
+include "./includes/footer.php";
 ?>

@@ -1,5 +1,5 @@
 <?php
-
+    include_once "includes/db_con.php";
 
     $title_name = "Carga de Imagenes";
     include "includes/head_settings.php";
@@ -29,7 +29,7 @@
                 <div class="row align-items-center">
                     <div class="col-auto fs-3"><b>2. </b></div>
                     <div class="col">
-                        Verá que se generan tarjetas (una por foto subida). Rellene en cada tarjeta los datos de la imagen que se ve junto al formulario.
+                        Verá que se generan tarjetas (una por c/foto subida). Rellene en cada tarjeta los datos de la imagen que se ve junto al formulario.
                     </div>
                 </div>
                 <hr class="col mx-3">

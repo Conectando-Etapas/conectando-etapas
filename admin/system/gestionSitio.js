@@ -14,13 +14,7 @@ var editorAnec = new Quill('#infoAnec', {
     },
     theme: 'snow'
 });
-var editorProyecto = new Quill('#infoProyectos', {
-    modules: {
-        toolbar: toolbarOptions
-    },
-    theme: 'snow'
-});
-var editorOrientacion = new Quill('#infoOrientacion    ', {
+var editorAnecDos = new Quill('#infoAnecDos', {
     modules: {
         toolbar: toolbarOptions
     },
@@ -30,21 +24,60 @@ var editorOrientacion = new Quill('#infoOrientacion    ', {
 // ANECDOTAS
     //  subir
         document.getElementById('subirAnec').addEventListener('click',()=> {
-            let titulo = document.getElementById('anecportada');
+            let titulo = document.getElementById('anecTitulo');
             let autor = document.getElementById('anecautor');
             let fecha = document.getElementById('anecfecha');
             let informacion = editorAnec.root;
             
 
             let info = ["anecdotas", 0, titulo.value, autor.value, fecha.value, informacion.innerHTML];
-            ajax(info)
-            console.log(informacion.innerHTML)
+            ajax(info);
             titulo.value = "";
             autor.value = "";
             fecha.value = "";
             informacion.innerHTML = "";
-            console.log("a")
         })
+
+    //modificar
+        // SELECT datos actuales
+        document.getElementById("selectAnecMod").addEventListener('change', (event)=>{
+
+            let data = new FormData;
+            let a = JSON.stringify([0, event.target.value]);
+            data.append('info', a);
+
+            fetch('./system/cargarAnec.php',{
+                method: "POST",
+                body: data
+            })
+            .then(res => res.json())
+            .then(res => {
+                document.getElementById("idAnecMod").value = res.id_anec;
+                document.getElementById("anecTituloMod").value = res.titulo;
+                document.getElementById("anecAutorMod").value = res.autor;
+                document.getElementById("anecFechaMod").value = res.fecha;
+                editorAnecDos.root.innerHTML = res.contenido;
+                // document.getElementById("infoAnecMod").children[0].innerHTML = res.contenido;
+            })
+
+        });
+
+        //UPDATE nuevos datos
+        document.getElementById('modifAnec').addEventListener('click',()=> {
+            let id_anec = document.getElementById('idAnecMod');
+            let titulo = document.getElementById('anecTituloMod');
+            let autor = document.getElementById('anecAutorMod');
+            let fecha = document.getElementById('anecFechaMod');
+            let informacion = editorAnecDos.root;
+
+            let info = ["anecdotas", 2, id_anec.value, titulo.value, autor.value, fecha.value, informacion.innerHTML];
+            ajax(info)
+            titulo.value = "";
+            autor.value = "";
+            fecha.value = "";
+            informacion.innerHTML = "";
+        })
+
     //eliminar
         document.getElementById("anecdotasMuestra").addEventListener('click', (event)=>{
 
@@ -56,8 +89,62 @@ var editorOrientacion = new Quill('#infoOrientacion    ', {
                 nodoPadre.removeChild(nodo);
             }
 
-        })
+        });
 
+//IMAGEN
+    //Cambiar img de vista previa
+    function switchImg(foto) {
+        document.getElementById("modalImg").setAttribute('src', `../ArchivoDigital/${foto}`);
+    }
+
+    //botones de Eliminar y Modificar
+    document.getElementById("imgsMuestra").addEventListener('click', (event)=>{
+        
+        let nodoPadre = document.getElementById("padreImgs")
+        let nodo = document.getElementById(`img-fila-${event.target.value}`)
+        
+        //eliminar
+        if(event.target.classList.contains("delete")){
+            
+            let info = ["imagen", 1, event.target.value, nodo.getAttribute("value")]
+            ajax(info)
+            nodoPadre.removeChild(nodo);
+        }
+
+
+        //Cargar formulario de modificacion
+        if (event.target.classList.contains("update")) {
+            let data = new FormData;
+            let a = JSON.stringify([1, event.target.getAttribute("value")]);
+            data.append('info', a);
+
+            fetch('./system/cargarAnec.php',{
+                method: "POST",
+                body: data
+            })
+            .then(res => res.json())
+            .then(res => {
+                // Cargo los inputs
+                document.getElementById("idImg").value = event.target.getAttribute("value");
+                document.getElementById("fechaImg").value = res[0].fecha;
+                document.getElementById("tituloImg").value = res[0].titulo;
+                document.getElementById("descripcionImg").innerHTML = res[0].descripcion;
+                
+                // Cargo las pills de categoría
+                if (res[1] != null) {
+                    res[1].forEach(elmt => {
+                        document.getElementById(`categoria-${elmt}`).checked = true;
+                    });
+                }
+            })
+
+
+        }
+
+        });
+
+
+/*
 //PROYECTO
     //subir
         document.getElementById('subirProyecto').addEventListener('click',()=>{
@@ -74,13 +161,12 @@ var editorOrientacion = new Quill('#infoOrientacion    ', {
             contenido.innerHTML=""
             resumen.value=""
 
-        })
+        });
 
     // eliminar
         document.getElementById("proyectoMuestra").addEventListener('click', (event)=>{
 
             if(event.target.classList.contains("delete")){
-                console.log(event.target.id)
                 let info = ["proyecto", 1, event.target.id]
                 ajax(info)
 
@@ -89,7 +175,7 @@ var editorOrientacion = new Quill('#infoOrientacion    ', {
                 nodoPadre.removeChild(nodo);
             }
 
-        })
+        });
 
 //Orinetacion
     //subir
@@ -101,13 +187,12 @@ var editorOrientacion = new Quill('#infoOrientacion    ', {
             ajax(info)
             orientacion.value = ""
             contenido.innerHTML = " "
-        })
+        });
 
     // eliminar
         document.getElementById("orientacionMuestra").addEventListener('click', (event)=>{
 
             if(event.target.classList.contains("delete")){
-                console.log(event.target.id)
                 
                 let info = ["orientacion", 1, event.target.id]
                 ajax(info)
@@ -116,8 +201,8 @@ var editorOrientacion = new Quill('#infoOrientacion    ', {
                 nodoPadre.removeChild(nodo);
             }
 
-        })
-
+        });
+*/
 
 
 //ajax
@@ -125,14 +210,13 @@ var editorOrientacion = new Quill('#infoOrientacion    ', {
         let data = new FormData;
         let a = JSON.stringify(array)
         data.append('array', a);
-
-        fetch('http://localhost/admin/system/AnecProyectOrient.php',{
+        fetch('./system/AnecProyectOrient.php',{
             method: "POST",
             body: data
         })
         .then(res => res.json())
         .then(res => {
-            console.log(res)
+            return res
+            // console.log(res); // usar SOLO en fase de desarrollo
         })
-        
     }

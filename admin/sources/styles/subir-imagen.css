@@ -1,5 +1,6 @@
 span.sticky-top {
     background-color: var(--bs-body-bg);
+    z-index: 1030;
 }
 
 .redCard {

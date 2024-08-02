@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="<?php echo isset($dark_mode) ? 'dark' : 'light'; ?>">
+<html lang="es" data-bs-theme="<?php echo (isset($dark_mode)) ? 'dark' : 'light'; ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     
     <script src="https://kit.fontawesome.com/e7401517de.js" crossorigin="anonymous"></script>
-    <title><?php echo isset($title_name) ? $title_name : 'EEST 2 "Ing. F. Senillosa"'; ?></title>
+    <title><?php echo (isset($title_name)) ? $title_name : 'EEST 2 "Ing. F. Senillosa"'; ?></title>
 
 </head>
 

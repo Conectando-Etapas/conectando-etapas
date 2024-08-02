@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="<?php echo ($dark_mode) ? 'dark' : 'light'; ?>">
+<html lang="es" data-bs-theme="<?php echo (isset($dark_mode)) ? 'dark' : 'light'; ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +12,16 @@
     <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
 
     <link rel="shortcut icon" href="../sources/images/favicon.png" type="image/x-icon">
-    <title><?php echo ($title_name) ? $title_name : 'EEST N°2 - "Ing F Senillosa"'; ?></title>
+    <title><?php echo (isset($title_name)) ? $title_name : 'EEST N°2 - "Ing F Senillosa"'; ?></title>
 </head>
 <body class="container-fluid">
     <header class="row">
         <img class="col-auto" src="../sources/images/logo_trans.png" alt="404" height="60px">
         <div class="botonera">
+            <?php if (!isset($login)) echo '
             <a class="btn btn-light" href="./">Principal</a>
             <a class="btn btn-light" href="./subir-imagen.php">Carga de datos</a>
+            <a class="btn btn-light text-danger" href="./system/ValidarLogin.php?logout=do">Cerrar sesión</a>
+            '; ?>
         </div>
     </header>

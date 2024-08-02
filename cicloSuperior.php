@@ -129,7 +129,7 @@
             <p class="fs-5">Aquí podrá entrar en detalle acerca de las diferentes especializaciones que ofrece nuestra institución.</p>
         </div>
 
-            <div class="owl-carousel owlSup col-12">
+            <div class="owl-carousel owlSup d-none d-sm-block col-12">
                 <div class="item">
                     <a href="./specFront.php?orientacion=programacion">
                         <img src="./imagenes/informatica3.jpg" alt="" class="imgSpecsSup rounded-3"/>
@@ -245,20 +245,22 @@
     loop:true,
     margin: 10,
     nav:true,
-    center:false,
+    center:true,
     lazyLoad: true,
     nav:false,
+    autoplay: true,
+    autoplayHoverPause: true,
     responsive:{
             0: {
                 stagePadding: 100,
                 center: true
             },
             600:{
-                stagePadding: 150,
+                stagePadding: 100,
                 center: true
             },
             1000:{
-                stagePadding: 200
+                stagePadding: 190
             }
     }
 })

@@ -27,7 +27,7 @@ svg{
 }
 
 body {
-    font-family: Cantarell;
+    font-family: Nunito, Cantarell, Calibri;
     overflow-x: hidden;
     height: 100vh;
     display: grid;
