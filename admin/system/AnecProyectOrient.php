@@ -61,10 +61,12 @@ function DELETE($informacion){
             break;
 
         case 'imagen':
-            $imgLocation = "../../ArchivoDigital/" . $informacion[3];
-            if (file_exists($imgLocation) && unlink($imgLocation))
-                $delete = "DELETE FROM `imagen` WHERE id_img = $informacion[2]";
-            else
+            $imgLocation = "../../web/ArchivoDigital/" . $informacion[3];
+            if (file_exists($imgLocation)) {
+                mysqli_query($link, "DELETE FROM `tiene_categoria` WHERE `id_imagen` = $informacion[2]");
+                $delete = "DELETE FROM `imagen` WHERE `id_img` = $informacion[2]";
+                unlink($imgLocation);
+            } else
                 die();
             break;
     }
