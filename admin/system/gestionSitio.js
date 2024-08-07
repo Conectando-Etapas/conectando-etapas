@@ -94,7 +94,7 @@ var editorAnecDos = new Quill('#infoAnecDos', {
 //IMAGEN
     //Cambiar img de vista previa
     function switchImg(foto) {
-        document.getElementById("modalImg").setAttribute('src', `../ArchivoDigital/${foto}`);
+        document.getElementById("modalImg").setAttribute('src', `https://tecnica2tandil.edu.ar/ArchivoDigital/${foto}`);
     }
 
     //botones de Eliminar y Modificar
